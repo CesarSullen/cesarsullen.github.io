@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Saru's Portfolio" />
+    <meta property="og:description" content="All my links" />
+    <meta property="og:url" content="cesarsullen.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/profile.jpg" />
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Saru's Links</title>
+  </head>
+  <body>
+    <div class="body-container links">
+      <div class="profile fade-in">
+        <img src="../images/profile.jpg" alt="profile" />
+        <h1 class="important-text">Cesar Sullen</h1>
+      </div>
+      <div class="cards-container">
+        <a href="https://github.com/CesarSullen/">
+          <div class="contact-card fade-in">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/873/873475.png"
+              alt="mail-icon"
+              class="icon"
+            />
+            <h3 class="title">GitHub</h3>
+          </div>
+        </a>
+
+        <a href="mailto:cesarsullen@proton.me">
+          <div class="contact-card fade-in">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/873/873475.png"
+              alt="mail-icon"
+              class="icon"
+            />
+            <h3 class="title">Mail</h3>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/cesar-sullen">
+          <div class="contact-card fade-in">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2335/2335273.png"
+              alt="ig-icon"
+              class="icon"
+            />
+            <h3 class="title">Instagram</h3>
+          </div>
+        </a>
+
+        <a href="https://x.com/saru_senpaii">
+          <div class="contact-card fade-in">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2335/2335289.png"
+              alt="mail-icon"
+              class="icon"
+            />
+            <h3 class="title">Twitter</h3>
+          </div>
+        </a>
+
+        <a href="./onlyfans.html">
+          <div class="contact-card fade-in">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2335/2335289.png"
+              alt="mail-icon"
+              class="icon"
+            />
+            <h3 class="title">OnlyFans</h3>
+          </div>
+        </a>
+
+        <a href="../index.html"><button class="btn">Go Back</button></a>
+      </div>
+    </div>
+
+    <script>
+      const fadeIn = document.querySelectorAll(".fade-in");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+      });
+      fadeIn.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

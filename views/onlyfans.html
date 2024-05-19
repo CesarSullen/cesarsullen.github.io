@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Saru's OF" />
+    <meta property="og:description" content="Shhh..." />
+    <meta property="og:url" content="cesarsullen.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/profile.jpg" />
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Saru's OF</title>
+  </head>
+  <body>
+    <div class="body-container onlyfans">
+      <div class="card of-confirmation">
+        <img src="../images/icons/of-icon.svg" class="card-img" />
+        <h5 class="card-title">Age Confirmation</h5>
+        <p class="card-text">
+          This site contains material
+          <span class="bold">restricted to minors</span> including nudity and
+          explicit sexual activity. You must confirm that you are
+          <span class="bold">over 18</span> to enter this site.
+        </p>
+        <div>
+          <button onclick="playVideo()" class="btn accept-btn" type="button">
+            Yes, I'm over 18
+          </button>
+
+          <button
+            onclick="window.location.href='./links.html'"
+            class="btn decline-btn"
+            type="button"
+          >
+            Go back
+          </button>
+        </div>
+      </div>
+
+      <video
+        id="packVideo"
+        class="d-none"
+        src="../videos/gato.mp4"
+        type="video/mp4 "
+        loop
+      >
+        Your browser does not support the video tag.
+      </video>
+      <a href="../index.html" class="d-none">
+        <button class="btn go-back-btn">Now see my portfolio</button>
+      </a>
+    </div>
+
+    <script src="../js/onlyfans.js"></script>
+  </body>
+</html>

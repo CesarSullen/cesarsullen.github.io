@@ -1,0 +1,50 @@
+.links {
+  display: block;
+
+  .profile {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    img {
+      width: 150px;
+      border: solid 3px $primary-color;
+      border-radius: 100vh;
+      margin: auto;
+
+      &:hover {
+        box-shadow: 0 0 10px 2px $primary-color;
+      }
+    }
+  }
+}
+
+.cards-container {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+.contact-card {
+  background-color: darken($color: $bg-color, $amount: 2);
+  border-radius: 15px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  border: solid 2px $primary-color;
+  box-shadow: 5px 5px 0px 0px $primary-color;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+  }
+
+  img {
+    width: 4rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
+}

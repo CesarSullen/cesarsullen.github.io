@@ -1,0 +1,162 @@
+.index {
+  .section-header {
+    font-size: 3rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+      img {
+        max-width: 400px;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+
+      .btn {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        svg {
+          width: 25px;
+        }
+      }
+    }
+  }
+  #services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    background-color: darken($color: $bg-color, $amount: 3);
+    border: solid 2px $primary-color;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $primary-color;
+      color: $bg-color;
+      font-weight: 600;
+
+      h3 {
+        color: $bg-color;
+      }
+    }
+
+    .card-header {
+      width: 100%;
+      display: flex;
+      margin-bottom: 1rem;
+
+      svg {
+        margin: auto;
+        width: 40px;
+      }
+    }
+    .card-title {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  #portfolio {
+    .carousel {
+      position: relative;
+      margin: auto;
+      width: 100%;
+      border: solid 2px $primary-color;
+      border-radius: 10px;
+    }
+
+    .carousel-images {
+      display: flex;
+      overflow: hidden;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      display: none;
+    }
+
+    .carousel-images img.active {
+      display: block;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      padding: 5px 5px;
+      border: none;
+      border-radius: 100vh;
+      cursor: pointer;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    #prevBtn {
+      left: 10px;
+      svg {
+        width: 50px;
+      }
+    }
+
+    #nextBtn {
+      right: 10px;
+      svg {
+        width: 50px;
+      }
+    }
+  }
+  .nav-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+
+  #contact {
+    @import "./links";
+  }
+}
+footer {
+  background-color: $primary-color;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 700px) {
+  .index {
+    .hero {
+      flex-direction: row;
+
+      .btn {
+        max-width: 180px;
+      }
+    }
+    #services {
+      flex-direction: row;
+      gap: 30px;
+      .service-card {
+        min-height: 220px;
+      }
+    }
+
+    .nav-btn {
+      flex-direction: row;
+    }
+  }
+}
