@@ -91,8 +91,6 @@ h1 {
   border: solid 3px #6201de;
   border-radius: 100vh;
   margin: auto;
-}
-.links .profile img:hover {
   box-shadow: 0 0 10px 2px #6201de;
 }
 
@@ -309,8 +307,6 @@ h1 {
   border: solid 3px #6201de;
   border-radius: 100vh;
   margin: auto;
-}
-.index #contact .links .profile img:hover {
   box-shadow: 0 0 10px 2px #6201de;
 }
 .index #contact .cards-container {

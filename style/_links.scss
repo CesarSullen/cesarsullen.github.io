@@ -10,10 +10,7 @@
       border: solid 3px $primary-color;
       border-radius: 100vh;
       margin: auto;
-
-      &:hover {
-        box-shadow: 0 0 10px 2px $primary-color;
-      }
+      box-shadow: 0 0 10px 2px $primary-color;
     }
   }
 }
