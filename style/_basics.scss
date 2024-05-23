@@ -11,6 +11,7 @@
 
 // Typography
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
 
 // Colors
 $bg-color: #191818;
@@ -30,13 +31,14 @@ $font-color: white;
 .underline {
   text-decoration: underline;
 }
-/* .styled-text{
-  font-family: ;
-} */
+.styled-text {
+  font-family: "Poetsen One";
+}
 .body-container {
   padding: 1.5rem;
   max-width: 1000px;
   margin: auto;
+  overflow-x: hidden;
 }
 .full-display-width {
   width: 100%;
