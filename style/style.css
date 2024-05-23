@@ -283,13 +283,13 @@ h1 {
   left: 10px;
 }
 .index #portfolio #prevBtn svg {
-  width: 50px;
+  width: 40px;
 }
 .index #portfolio #nextBtn {
   right: 10px;
 }
 .index #portfolio #nextBtn svg {
-  width: 50px;
+  width: 40px;
 }
 .index .nav-btn {
   display: flex;
