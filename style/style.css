@@ -34,7 +34,6 @@
   padding: 1.5rem;
   max-width: 1000px;
   margin: auto;
-  overflow-x: hidden;
 }
 
 .full-display-width {
@@ -51,13 +50,20 @@
   max-width: 400px;
   background-color: #6201de;
   color: white;
+  border: solid 2px #6201de;
 }
 .btn:hover {
   box-shadow: 0 0 10px 1px #6201de;
-  transform: scale(1.1);
 }
 .btn:active {
   transform: scale(0.9);
+}
+
+.btn-ghost {
+  background: transparent;
+}
+.btn-ghost:hover {
+  background: #6201de;
 }
 
 .fade-in {
@@ -203,8 +209,13 @@ h1 {
 .index .hero .container h1 {
   font-size: 4rem;
 }
-.index .hero .container .btn {
+.index .hero .container .buttons {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.index .hero .container .btn {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -347,7 +358,10 @@ footer {
   .index .hero {
     flex-direction: row;
   }
-  .index .hero .btn {
+  .index .hero .container .buttons {
+    flex-direction: row;
+  }
+  .index .hero .container .btn {
     max-width: 180px;
   }
   .index #services {

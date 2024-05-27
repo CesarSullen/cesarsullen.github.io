@@ -38,7 +38,6 @@ $font-color: white;
   padding: 1.5rem;
   max-width: 1000px;
   margin: auto;
-  overflow-x: hidden;
 }
 .full-display-width {
   width: 100%;
@@ -53,13 +52,20 @@ $font-color: white;
   max-width: 400px;
   background-color: $primary-color;
   color: $font-color;
+  border: solid 2px $primary-color;
 
   &:hover {
     box-shadow: 0 0 10px 1px $primary-color;
-    transform: scale(1.1);
   }
   &:active {
     transform: scale(0.9);
+  }
+}
+.btn-ghost {
+  background: transparent;
+
+  &:hover {
+    background: $primary-color;
   }
 }
 .fade-in {

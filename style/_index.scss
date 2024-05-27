@@ -18,9 +18,13 @@
       h1 {
         font-size: 4rem;
       }
-
-      .btn {
+      .buttons {
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .btn {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -142,9 +146,13 @@ footer {
   .index {
     .hero {
       flex-direction: row;
-
-      .btn {
-        max-width: 180px;
+      .container {
+        .buttons {
+          flex-direction: row;
+        }
+        .btn {
+          max-width: 180px;
+        }
       }
     }
     #services {
