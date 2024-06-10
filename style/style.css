@@ -158,9 +158,11 @@ h1 {
 }
 .onlyfans .card .accept-btn {
   background-color: #0990d0;
+  border: none;
 }
 .onlyfans .card .decline-btn {
   background-color: #9d9d9e;
+  border: none;
 }
 .onlyfans .d-none {
   display: none;
