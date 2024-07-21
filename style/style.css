@@ -223,9 +223,6 @@ h1 {
   justify-content: space-around;
   align-items: center;
 }
-.index .hero .container .btn svg {
-  width: 25px;
-}
 .index #services {
   display: flex;
   flex-direction: column;
@@ -308,47 +305,6 @@ h1 {
   flex-direction: column;
   gap: 10px;
   margin-bottom: 2rem;
-}
-.index #contact .links {
-  display: block;
-}
-.index #contact .links .profile {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.index #contact .links .profile img {
-  width: 150px;
-  border: solid 3px #6201de;
-  border-radius: 100vh;
-  margin: auto;
-  box-shadow: 0 0 10px 2px #6201de;
-}
-.index #contact .cards-container {
-  display: block;
-  max-width: 300px;
-  margin: auto;
-}
-.index #contact .contact-card {
-  background-color: #141313;
-  border-radius: 15px;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-  border: solid 2px #6201de;
-  box-shadow: 5px 5px 0px 0px #6201de;
-}
-.index #contact .contact-card:hover {
-  transform: scale(1.1);
-  box-shadow: none;
-}
-.index #contact .contact-card img {
-  width: 4rem;
-}
-.index #contact .contact-card .title {
-  font-size: 1.5rem;
-  color: #6201de;
 }
 
 footer {
