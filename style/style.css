@@ -100,13 +100,17 @@ h1 {
   margin: auto;
   box-shadow: 0 0 10px 2px #6201de;
 }
+.all-links-container {
+  margin: auto;
+  max-width: 1000px;
+}
+
 .cards-container {
   display: block;
-  max-width: 300px;
-  margin: auto;
 }
 
 .contact-card {
+  margin: auto;
   background-color: #141313;
   border-radius: 15px;
   padding: 0.5rem;
@@ -116,6 +120,7 @@ h1 {
   margin-bottom: 20px;
   border: solid 2px #6201de;
   box-shadow: 5px 5px 0px 0px #6201de;
+  max-width: 300px;
 }
 .contact-card:hover {
   transform: scale(1.1);
@@ -130,6 +135,15 @@ h1 {
   color: #6201de;
 }
 
+@media screen and (min-width: 700px) {
+  .all-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards-container {
+    margin: 0;
+  }
+}
 .onlyfans .card {
   padding: 0.5rem;
   width: 250px;
