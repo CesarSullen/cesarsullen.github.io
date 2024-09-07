@@ -13,6 +13,9 @@
       box-shadow: 0 0 10px 2px $primary-color;
     }
   }
+  h1 {
+    @extend .profile;
+  }
 }
 
 .cards-container {
@@ -38,6 +41,7 @@
 
   img {
     width: 4rem;
+    border-radius: 15px;
   }
 
   .title {

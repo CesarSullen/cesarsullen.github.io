@@ -89,18 +89,17 @@ h1 {
 .links {
   display: block;
 }
-.links .profile {
+.links .profile, .links h1 {
   margin-bottom: 1rem;
   text-align: center;
 }
-.links .profile img {
+.links .profile img, .links h1 img {
   width: 150px;
   border: solid 3px #6201de;
   border-radius: 100vh;
   margin: auto;
   box-shadow: 0 0 10px 2px #6201de;
 }
-
 .cards-container {
   display: block;
   max-width: 300px;
@@ -124,6 +123,7 @@ h1 {
 }
 .contact-card img {
   width: 4rem;
+  border-radius: 15px;
 }
 .contact-card .title {
   font-size: 1.5rem;
