@@ -111,7 +111,7 @@ h1 {
 
 .contact-card {
   margin: auto;
-  background-color: #141313;
+  background-color: rgb(19.7959183673, 19.0040816327, 19.0040816327);
   border-radius: 15px;
   padding: 0.5rem;
   display: flex;
@@ -243,7 +243,7 @@ h1 {
   align-items: center;
 }
 .index .service-card {
-  background-color: #111111;
+  background-color: rgb(17.193877551, 16.506122449, 16.506122449);
   border: solid 2px #6201de;
   border-radius: 10px;
   padding: 1rem;
@@ -325,6 +325,7 @@ footer {
   background-color: #6201de;
   text-align: center;
   font-size: 1.5rem;
+  min-height: 200px;
 }
 
 @media screen and (min-width: 700px) {
@@ -346,6 +347,9 @@ footer {
   }
   .index .nav-btn {
     flex-direction: row;
+  }
+  footer {
+    min-height: 400px;
   }
 }
 
