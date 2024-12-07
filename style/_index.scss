@@ -73,27 +73,24 @@
 		.carousel {
 			position: relative;
 			margin: auto;
-			width: 100%;
-			border: solid 2px $primary-color;
-			border-radius: 10px;
 		}
 
 		.carousel-images {
-			display: flex;
-			overflow: hidden;
-			border-radius: 10px 10px 10px 10px;
+			a {
+				width: 100%;
+				animation: autoShow 0.5s ease;
+				&:not(:first-child) {
+					display: none;
+				}
+			}
+			img {
+				border-radius: 10px 10px 10px 10px;
+				border: solid 2px $primary-color;
+				width: 100%;
+			}
 		}
 
-		.carousel-images img {
-			width: 100%;
-			display: none;
-		}
-
-		.carousel-images img.active {
-			display: block;
-		}
-
-		button {
+		.control-btn {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -102,10 +99,7 @@
 			border: none;
 			border-radius: 100vh;
 			cursor: pointer;
-
-			img {
-				width: 50px;
-			}
+			width: 50px;
 		}
 
 		#prevBtn {
@@ -163,5 +157,13 @@ footer {
 	}
 	footer {
 		min-height: 400px;
+	}
+}
+@keyframes autoShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
