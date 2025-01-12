@@ -8,24 +8,24 @@
 		<meta property="og:description" content="All my links" />
 		<meta property="og:url" content="cesarsullen.github.io" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="./images/icon.JPG" />
+		<meta property="og:image" content="./assets/icon.JPG" />
 
-		<link rel="icon" type="image/jpg" href="./images/icon.JPG" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./images/icon.JPG" />
+		<link rel="icon" type="image/jpg" href="./assets/icon.JPG" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.JPG" />
 		<link rel="stylesheet" href="./style/style.css" />
 		<title>Saru's Links</title>
 	</head>
 	<body>
-		<div class="body-container links">
-			<div class="profile fade-in">
-				<img src="./images/profile.jpg" alt="profile" />
+		<div class="body-container">
+			<div class="profile">
+				<img src="./assets/profile.jpg" alt="profile" />
 			</div>
 
-			<div class="all-links-container">
+			<div class="links-container">
 				<div class="cards-container">
-					<h1 class="important-text styled-text">My Links</h1>
+					<h1 class="section-title">My Links</h1>
 					<a href="https://github.com/CesarSullen/">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
 								src="https://cdn-icons-png.flaticon.com/512/3488/3488408.png"
 								alt="github-icon"
@@ -36,7 +36,7 @@
 					</a>
 
 					<a href="mailto:cesarsullen@proton.me">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
 								src="https://cdn-icons-png.flaticon.com/512/873/873475.png"
 								alt="mail-icon"
@@ -47,7 +47,7 @@
 					</a>
 
 					<a href="https://www.instagram.com/saru_senpaii">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
 								src="https://cdn-icons-png.flaticon.com/512/2335/2335273.png"
 								alt="ig-icon"
@@ -58,7 +58,7 @@
 					</a>
 
 					<a href="https://x.com/saru_senpaii">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
 								src="https://cdn-icons-png.flaticon.com/512/2335/2335289.png"
 								alt="twitter-icon"
@@ -69,7 +69,7 @@
 					</a>
 
 					<a href="./views/onlyfans.html">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
 								src="https://cdn-icons-png.flaticon.com/512/2217/2217588.png"
 								alt="of-icon"
@@ -81,11 +81,11 @@
 				</div>
 
 				<div class="cards-container">
-					<h1 class="important-text styled-text">My Projects</h1>
+					<h1 class="section-title">My Projects</h1>
 					<a href="https://getbaxar.com/baxar">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
-								src="./images/icons/baxar-logo.PNG"
+								src="./assets/icons/baxar-logo.PNG"
 								alt="baxar-icon"
 								class="icon"
 							/>
@@ -94,9 +94,9 @@
 					</a>
 
 					<a href="https://cesarsullen.github.io/pokedex">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
-								src="./images/icons/pokedex-logo.JPG"
+								src="./assets/icons/pokedex-logo.JPG"
 								alt="pokedex-icon"
 								class="icon"
 							/>
@@ -105,9 +105,9 @@
 					</a>
 
 					<a href="https://cesarsullen.github.io/radiocast">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
-								src="./images/icons/radiocast-logo.JPG"
+								src="./assets/icons/radiocast-logo.JPG"
 								alt="radiocast-icon"
 								class="icon"
 							/>
@@ -116,9 +116,9 @@
 					</a>
 
 					<a href="https://sophiemystique.com">
-						<div class="contact-card fade-in">
+						<div class="contact-card">
 							<img
-								src="./images/icons/sophie-logo.jpeg"
+								src="./assets/icons/sophie-logo.jpeg"
 								alt="sophie-icon"
 								class="icon"
 							/>
@@ -127,11 +127,12 @@
 					</a>
 				</div>
 			</div>
+
 			<a href="./index.html"><button class="btn">Go Back</button></a>
 		</div>
 
 		<script>
-			const fadeIn = document.querySelectorAll(".fade-in");
+			const fadeIn = document.querySelectorAll(".");
 
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {

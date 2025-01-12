@@ -1,0 +1,104 @@
+// Reset
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	border: none;
+	transition: all 0.3s;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	font-family: "Poppins";
+}
+
+// Typography
+@font-face {
+	font-family: "Poppins";
+	src: url("../typography/Poppins/Poppins-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "PoetsenOne";
+	src: url("../typography/PoetsenOne/PoetsenOne-Regular.ttf") format("truetype");
+	font-weight: 400;
+}
+
+// Colors
+$primary-color: #6201de;
+$secondary-color: #191818;
+
+// Utilities
+.important-text {
+	color: $primary-color;
+}
+.bold {
+	font-weight: 600;
+}
+.italic {
+	font-style: italic;
+}
+.underline {
+	text-decoration: underline;
+}
+.styled-text {
+	font-family: "PoetsenOne";
+}
+.section {
+	margin-bottom: 2rem;
+}
+.body- {
+	padding: 1.5rem;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.btn {
+	padding: 0.6rem 1.4rem;
+	border-radius: 5px;
+	background: $primary-color;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	width: 100%;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	border: solid 2px $primary-color;
+	color: white;
+
+	&:hover {
+		opacity: 0.8;
+	}
+	&:active {
+		transform: scale(0.9);
+	}
+}
+.btn-ghost {
+	background: transparent;
+	color: $primary-color;
+
+	&:hover {
+		background-color: $primary-color;
+		opacity: 1;
+		color: white;
+	}
+}
+
+body {
+	background-color: $secondary-color;
+	color: white;
+}
+.body-container {
+	padding: 1rem;
+	max-width: 1000px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-top: 2rem;
+}
+.section-title {
+	font-size: 3rem;
+	font-family: "PoetsenOne";
+	color: $primary-color;
+	margin-bottom: 10px;
+}

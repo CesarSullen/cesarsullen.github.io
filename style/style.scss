@@ -1,5 +1,161 @@
-@import "./basics";
+@import "./reset";
 @import "./links";
 @import "./onlyfans";
-@import "./works";
-@import "./index";
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.hero-img {
+	img {
+		width: 100%;
+
+		mask-image: url(../assets/ink-mask.png);
+		mask-size: cover;
+		mask-position: center;
+	}
+}
+.buttons {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.btn {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.services-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.service-card {
+	background-color: darken($color: $secondary-color, $amount: 2);
+	border: solid 2px $primary-color;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+
+	&:hover {
+		transform: scale(1.1);
+		background-color: $primary-color;
+		color: $secondary-color;
+		font-weight: 600;
+
+		h3 {
+			color: $secondary-color;
+		}
+	}
+}
+.card-header {
+	width: 100%;
+	display: flex;
+	margin-bottom: 1rem;
+
+	img {
+		margin: auto;
+		width: 40px;
+	}
+}
+.advice-title {
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.carousel {
+	position: relative;
+	margin: auto;
+}
+
+.carousel-images {
+	a {
+		animation: autoShow 0.5s ease;
+		&:not(:first-child) {
+			display: none;
+		}
+	}
+	img {
+		border-radius: 10px 10px 10px 10px;
+		border: solid 2px $primary-color;
+		width: 100%;
+	}
+}
+
+.control-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	border-radius: 100vh;
+	cursor: pointer;
+	width: 50px;
+}
+
+#prevBtn {
+	left: 10px;
+	svg {
+		width: 40px;
+	}
+}
+
+#nextBtn {
+	right: 10px;
+	svg {
+		width: 40px;
+	}
+}
+
+.nav-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 2rem;
+}
+
+footer {
+	background-color: $primary-color;
+	text-align: center;
+	font-size: 1.5rem;
+	min-height: 200px;
+}
+@media screen and (min-width: 700px) {
+	.hero-section {
+		flex-direction: row;
+	}
+	.hero-content {
+		.buttons {
+			flex-direction: row;
+		}
+	}
+	.services-section {
+		flex-direction: row;
+		gap: 30px;
+	}
+	.service-card {
+		min-height: 220px;
+	}
+
+	.nav-btn {
+		flex-direction: row;
+
+		.btn {
+			min-width: 200px;
+		}
+	}
+}
+footer {
+	min-height: 400px;
+}
+
+@keyframes autoShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
