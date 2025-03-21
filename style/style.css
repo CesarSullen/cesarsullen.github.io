@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -52,33 +53,64 @@
 }
 
 .btn {
-  padding: 0.6rem 1.4rem;
-  border-radius: 5px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  border: solid 2px #6201de;
   background: #6201de;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   width: 100%;
-  letter-spacing: 3px;
+  min-width: 200px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  border: solid 2px #6201de;
   color: white;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 .btn:hover {
-  opacity: 0.8;
+  background: rgb(122.7130044843, 20.0582959641, 253.9417040359);
+  box-shadow: 0 4px 12px rgba(98, 1, 222, 0.3);
+  transform: translateY(-2px);
 }
 .btn:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
+  box-shadow: none;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(25, 24, 24, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+.btn:hover:after {
+  width: 200px;
+  height: 200px;
 }
 
 .btn-ghost {
   background: transparent;
+  border: solid 2px #6201de;
   color: #6201de;
+  transition: all 0.3s ease;
 }
 .btn-ghost:hover {
-  background-color: #6201de;
-  opacity: 1;
-  color: white;
+  background: #6201de;
+  color: #191818;
+  box-shadow: 0 4px 12px rgba(98, 1, 222, 0.3);
+  transform: translateY(-2px);
+}
+.btn-ghost:active {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 body {
@@ -103,20 +135,54 @@ body {
 }
 
 .profile {
+  background: linear-gradient(to bottom right, #6201de 40%, rgb(251, 45, 80));
   margin-bottom: 1rem;
-  text-align: center;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
-.profile img {
-  width: 150px;
-  border: solid 3px #6201de;
+.profile li:before {
+  content: "❖";
+  margin-right: 5px;
+}
+.profile .btn {
+  background-color: white;
   border-radius: 100vh;
-  box-shadow: 0 0 10px 2px #6201de;
+  color: #6201de;
+  border: none;
+}
+@media screen and (min-width: 700px) {
+  .profile {
+    width: 50%;
+  }
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-img {
+  width: 120px;
+  border-radius: 100vh;
+}
+
+.profile-info {
+  font-size: 22px;
+}
+.profile-info h2 {
+  font-family: "PoetsenOne";
+  letter-spacing: 2px;
 }
 
 .links-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 30px;
   margin-bottom: 50px;
 }
 @media screen and (min-width: 700px) {
@@ -125,6 +191,13 @@ body {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
+}
+
+.cards-container {
+  width: 100%;
+}
+.cards-container:last-child {
+  grid-column: span 2;
 }
 
 .card {
@@ -136,6 +209,7 @@ body {
   border: solid 2px #6201de;
   box-shadow: 5px 5px 0px 0px #6201de;
   letter-spacing: 1px;
+  width: 100%;
 }
 .card img {
   border-radius: 8px;
@@ -145,8 +219,8 @@ body {
   color: #6201de;
 }
 @media screen and (min-width: 700px) {
-  .card {
-    width: 400px;
+  .card .title {
+    font-size: 1.2rem;
   }
   .card:hover {
     transform: scale(1.1);
@@ -156,8 +230,8 @@ body {
 
 .contact-card {
   max-width: 400px;
-  margin-bottom: 20px;
   align-items: center;
+  margin-bottom: 15px;
 }
 .contact-card img {
   width: 60px;

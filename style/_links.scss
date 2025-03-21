@@ -1,24 +1,69 @@
 .profile {
+	background: linear-gradient(
+		to bottom right,
+		$primary-color 40%,
+		rgb(251, 45, 80)
+	);
 	margin-bottom: 1rem;
-	text-align: center;
+	border-radius: 15px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
 
-	img {
-		width: 150px;
-		border: solid 3px $primary-color;
+	li:before {
+		content: "❖";
+		margin-right: 5px;
+	}
+
+	.btn {
+		background-color: white;
 		border-radius: 100vh;
-		box-shadow: 0 0 10px 2px $primary-color;
+		color: $primary-color;
+		border: none;
+	}
+
+	@media screen and (min-width: 700px) {
+		width: 50%;
+	}
+}
+.profile-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.profile-img {
+	width: 120px;
+	border-radius: 100vh;
+}
+
+.profile-info {
+	font-size: 22px;
+
+	h2 {
+		font-family: "PoetsenOne";
+		letter-spacing: 2px;
 	}
 }
 .links-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	gap: 30px;
 	margin-bottom: 50px;
 
 	@media screen and (min-width: 700px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		justify-items: center;
+	}
+}
+
+.cards-container {
+	width: 100%;
+
+	&:last-child {
+		grid-column: span 2;
 	}
 }
 .card {
@@ -30,8 +75,10 @@
 	border: solid 2px $primary-color;
 	box-shadow: 5px 5px 0px 0px $primary-color;
 	letter-spacing: 1px;
+	width: 100%;
+
 	img {
-		border-radius: 8px;
+		border-radius: $border-radius-general;
 	}
 
 	.title {
@@ -40,7 +87,9 @@
 	}
 
 	@media screen and (min-width: 700px) {
-		width: 400px;
+		.title {
+			font-size: 1.2rem;
+		}
 
 		&:hover {
 			transform: scale(1.1);
@@ -50,8 +99,8 @@
 }
 .contact-card {
 	max-width: 400px;
-	margin-bottom: 20px;
 	align-items: center;
+	margin-bottom: 15px;
 
 	img {
 		width: 60px;

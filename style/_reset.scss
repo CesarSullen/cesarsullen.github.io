@@ -27,6 +27,7 @@
 // Colors
 $primary-color: #6201de;
 $secondary-color: #191818;
+$border-radius-general: 8px;
 
 // Utilities
 .important-text {
@@ -54,33 +55,69 @@ $secondary-color: #191818;
 }
 
 .btn {
-	padding: 0.6rem 1.4rem;
-	border-radius: 5px;
+	padding: 0.8rem 1.6rem;
+	border-radius: $border-radius-general;
+	border: solid 2px $primary-color;
 	background: $primary-color;
 	font-size: 1rem;
-	font-weight: 600;
 	cursor: pointer;
 	width: 100%;
-	letter-spacing: 3px;
+	min-width: 200px;
+	letter-spacing: 2px;
 	text-transform: uppercase;
-	border: solid 2px $primary-color;
 	color: white;
+	text-align: center;
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
 
 	&:hover {
-		opacity: 0.8;
+		background: lighten($primary-color, 10%);
+		box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+		transform: translateY(-2px);
 	}
+
 	&:active {
-		transform: scale(0.9);
+		transform: scale(0.95);
+		box-shadow: none;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		background: rgba($secondary-color, 0.2);
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		transition: width 0.4s ease, height 0.4s ease;
+	}
+
+	&:hover:after {
+		width: 200px;
+		height: 200px;
 	}
 }
+
 .btn-ghost {
 	background: transparent;
+	border: solid 2px $primary-color;
 	color: $primary-color;
+	transition: all 0.3s ease;
 
 	&:hover {
-		background-color: $primary-color;
-		opacity: 1;
-		color: white;
+		background: $primary-color;
+		color: $secondary-color;
+		box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		transform: scale(0.95);
+		box-shadow: none;
 	}
 }
 
