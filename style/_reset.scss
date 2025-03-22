@@ -10,6 +10,7 @@
 	text-decoration: none;
 	outline: none;
 	font-family: "Poppins";
+	color: white;
 }
 
 // Typography
@@ -110,7 +111,7 @@ $border-radius-general: 8px;
 
 	&:hover {
 		background: $primary-color;
-		color: $secondary-color;
+		color: white;
 		box-shadow: 0 4px 12px rgba($primary-color, 0.3);
 		transform: translateY(-2px);
 	}
@@ -123,7 +124,6 @@ $border-radius-general: 8px;
 
 body {
 	background-color: $secondary-color;
-	color: white;
 }
 .body-container {
 	padding: 1rem;

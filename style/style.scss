@@ -31,22 +31,40 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 10px;
 }
 .service-card {
 	background-color: darken($color: $secondary-color, $amount: 2);
 	border: solid 2px $primary-color;
 	border-radius: 10px;
 	padding: 1rem;
-	margin-bottom: 1rem;
+	position: relative;
+	width: 100%;
 
+	&::after {
+		content: "❖";
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 2rem;
+		color: $primary-color;
+		pointer-events: none;
+		transition: all 0.3s ease;
+		line-height: 1;
+	}
+
+	&:hover::after {
+		z-index: -1;
+		font-size: 7rem;
+		color: rgba(0, 0, 0, 0.4);
+		transform: rotate(225deg);
+	}
 	&:hover {
 		transform: scale(1.1);
 		background-color: $primary-color;
-		color: $secondary-color;
-		font-weight: 600;
 
 		h3 {
-			color: $secondary-color;
+			color: white;
 		}
 	}
 }
@@ -65,12 +83,37 @@
 	text-align: center;
 }
 
+.portfolio-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		flex-direction: row;
+
+		.carousel {
+			grid-row: span 2;
+			grid-column: span 2;
+		}
+		.project-info {
+			grid-column: 3;
+			font-size: 0.85rem;
+		}
+		.synthocean {
+			grid-column: 3;
+			grid-row: 2;
+			font-size: 0.95rem;
+		}
+	}
+}
 .carousel {
 	position: relative;
-	margin: auto;
 }
-
 .carousel-images {
+	line-height: 0;
+
 	a {
 		animation: autoShow 0.5s ease;
 		&:not(:first-child) {
@@ -83,7 +126,6 @@
 		width: 100%;
 	}
 }
-
 .control-btn {
 	position: absolute;
 	top: 50%;
@@ -94,21 +136,38 @@
 	cursor: pointer;
 	width: 50px;
 }
-
 #prevBtn {
 	left: 10px;
 	svg {
 		width: 40px;
 	}
 }
-
 #nextBtn {
 	right: 10px;
 	svg {
 		width: 40px;
 	}
 }
+.project-info {
+	background-color: #323232;
+	border: solid 2px #464649;
+	padding: 1rem;
+	border-radius: $border-radius-general;
+}
+.synthocean {
+	background: linear-gradient(to bottom right, #0b00e0, #030037);
+	padding: 1rem;
+	border-radius: $border-radius-general;
+	border: solid 2px #0b00e0;
+	min-height: 200px;
+	position: relative;
+	box-shadow: 0 2px 15px rgba(11, 0, 224, 0.5);
 
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 5px 25px rgba(11, 0, 224, 0.5);
+	}
+}
 .nav-btn {
 	display: flex;
 	flex-direction: column;
