@@ -1,11 +1,27 @@
 @import "./reset";
+@import "./animations";
 @import "./links";
 @import "./onlyfans";
+
+// Mixins
+@mixin hover-effect($color) {
+	background: linear-gradient(to bottom right, $color, rgba($color, 0.4));
+	border: solid 2px $color;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0px 2px 15px $color;
+	}
+}
 
 .hero-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
 }
 .hero-img {
 	img {
@@ -21,6 +37,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
 }
 .btn {
 	display: flex;
@@ -32,6 +52,11 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+		gap: 30px;
+	}
 }
 .service-card {
 	background-color: darken($color: $secondary-color, $amount: 2);
@@ -60,12 +85,15 @@
 		transform: rotate(225deg);
 	}
 	&:hover {
-		transform: scale(1.1);
-		background-color: $primary-color;
-
+		@include hover-effect($primary-color);
+		scale: 1.1;
 		h3 {
 			color: white;
 		}
+	}
+
+	@media screen and (min-width: 700px) {
+		min-height: 220px;
 	}
 }
 .card-header {
@@ -78,7 +106,7 @@
 		width: 40px;
 	}
 }
-.advice-title {
+.card-title {
 	margin-bottom: 0.5rem;
 	text-align: center;
 }
@@ -149,65 +177,43 @@
 	}
 }
 .project-info {
-	background-color: #323232;
-	border: solid 2px #464649;
+	@include hover-effect(#323232);
 	padding: 1rem;
 	border-radius: $border-radius-general;
 }
 .synthocean {
-	background: linear-gradient(to bottom right, #0b00e0, #030037);
+	@include hover-effect(#0b00e0);
+
 	padding: 1rem;
 	border-radius: $border-radius-general;
-	border: solid 2px #0b00e0;
 	min-height: 200px;
 	position: relative;
-	box-shadow: 0 2px 15px rgba(11, 0, 224, 0.5);
-
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 5px 25px rgba(11, 0, 224, 0.5);
-	}
 }
 .nav-btn {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 	margin-bottom: 2rem;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+		justify-content: center;
+		.btn {
+			min-width: 300px;
+		}
+	}
 }
 
 footer {
 	background-color: $primary-color;
 	text-align: center;
 	font-size: 1.5rem;
-	min-height: 200px;
-}
-@media screen and (min-width: 700px) {
-	.hero-section {
-		flex-direction: row;
-	}
-	.hero-content {
-		.buttons {
-			flex-direction: row;
+	.bold {
+		padding-block: 150px;
+		@media screen and (min-width: 700px) {
+			padding-block: 50px;
 		}
 	}
-	.services-section {
-		flex-direction: row;
-		gap: 30px;
-	}
-	.service-card {
-		min-height: 220px;
-	}
-
-	.nav-btn {
-		flex-direction: row;
-
-		.btn {
-			min-width: 200px;
-		}
-	}
-}
-footer {
-	min-height: 400px;
 }
 
 @keyframes autoShow {

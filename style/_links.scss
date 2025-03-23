@@ -12,6 +12,11 @@
 	gap: 20px;
 	width: 100%;
 
+	&:hover {
+		box-shadow: 0px 2px 15px $primary-color;
+		transform: translateY(-5px);
+	}
+
 	li:before {
 		content: "❖";
 		margin-right: 5px;

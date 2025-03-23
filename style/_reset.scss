@@ -63,7 +63,7 @@ $border-radius-general: 8px;
 	font-size: 1rem;
 	cursor: pointer;
 	width: 100%;
-	min-width: 200px;
+	min-width: 300px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: white;
@@ -98,8 +98,8 @@ $border-radius-general: 8px;
 	}
 
 	&:hover:after {
-		width: 200px;
-		height: 200px;
+		width: 300px;
+		height: 300px;
 	}
 }
 
