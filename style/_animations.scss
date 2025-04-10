@@ -45,3 +45,12 @@
 		opacity: 1;
 	}
 }
+
+@keyframes autoRun {
+	from {
+		left: 100%;
+	}
+	to {
+		left: calc(var(--width) * -1);
+	}
+}
