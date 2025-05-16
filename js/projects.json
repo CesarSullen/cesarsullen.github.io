@@ -15,6 +15,11 @@
 		"description": "Pokedex is a practice project hosted on GitHub Pages, developed as a personal exercise to create a digital catalog of Pokémon. It allows users to explore a collection of Pokémon data, with details like names, types, and stats pulled from an external source."
 	},
 	{
+		"image": "./assets/banners/starjewels.png",
+		"title": "Star Jewel's",
+		"description": "Offering unique silver jewelry, infused with intention, glamour, and balance. The site captures the brand’s essence, where each piece not only adorns but connects with the wearer’s inner energy and shine, conveying elegance and a touch in every design."
+	},
+	{
 		"image": "./assets/banners/sophiemystique.png",
 		"title": "Sophie Mystique",
 		"description": "Sophie Mystique was my first sold project, a personal website created for a singer named Sophie. The design was crafted per her request to showcase her music and persona, offering a custom digital space for her audience."

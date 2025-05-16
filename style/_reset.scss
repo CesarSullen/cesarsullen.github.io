@@ -124,6 +124,7 @@ $border-radius-general: 8px;
 
 body {
 	background-color: $secondary-color;
+	overflow-x: hidden;
 }
 .body-container {
 	padding: 1rem;
