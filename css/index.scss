@@ -1,0 +1,260 @@
+@import "./reset";
+@import "./animations";
+@import "./links";
+@import "./onlyfans";
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
+}
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.hero-img {
+	img {
+		width: 100%;
+	}
+}
+.slider {
+	width: 100%;
+	height: var(--height);
+	overflow: hidden;
+	mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+
+	&:hover {
+		.item {
+			animation-play-state: paused !important;
+			filter: grayscale(1);
+		}
+	}
+}
+
+/* Lista del Slider */
+.list {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	// min-width: calc(var(--width) * var(--quantity));
+	position: relative;
+}
+
+.item {
+	width: var(--width);
+	height: var(--height);
+	position: absolute;
+	left: 100%;
+	animation: autoRun 5s linear infinite;
+	animation-delay: calc(
+		(6s / var(--quantity)) * (var(--position) - 1)
+	) !important; /* Retraso dinámico según posición */
+	background: $secondary-color;
+
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		object-fit: cover;
+	}
+
+	&:hover {
+		filter: grayscale(0) !important;
+	}
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+	}
+}
+.btn {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.services-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+		gap: 30px;
+	}
+}
+.service-card {
+	background-color: darken($color: $secondary-color, $amount: 2);
+	border: solid 2px $primary-color;
+	border-radius: 10px;
+	padding: 1rem;
+	position: relative;
+	width: 100%;
+
+	&::after {
+		content: "❖";
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 2rem;
+		color: $primary-color;
+		pointer-events: none;
+		transition: all 0.3s ease;
+		line-height: 1;
+	}
+
+	&:hover::after {
+		z-index: -1;
+		font-size: 7rem;
+		color: rgba(0, 0, 0, 0.4);
+		transform: rotate(225deg);
+	}
+	&:hover {
+		@include hover-effect($primary-color);
+		scale: 1.1;
+		h3 {
+			color: white;
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+		min-height: 220px;
+	}
+}
+.card-header {
+	width: 100%;
+	display: flex;
+	margin-bottom: 1rem;
+
+	img {
+		margin: auto;
+		width: 40px;
+	}
+}
+.card-title {
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.portfolio-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+
+	@media screen and (min-width: 700px) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		flex-direction: row;
+
+		.carousel {
+			grid-row: span 2;
+			grid-column: span 2;
+		}
+		.project-info {
+			grid-column: 3;
+			font-size: 0.85rem;
+		}
+		.synthocean {
+			grid-column: 3;
+			grid-row: 2;
+			font-size: 0.95rem;
+		}
+	}
+}
+.carousel {
+	position: relative;
+}
+.carousel-images {
+	line-height: 0;
+
+	a {
+		animation: autoShow 0.5s ease;
+		&:not(:first-child) {
+			display: none;
+		}
+	}
+	img {
+		border-radius: 10px 10px 10px 10px;
+		border: solid 2px $primary-color;
+		width: 100%;
+	}
+}
+.control-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	border-radius: 100vh;
+	cursor: pointer;
+	width: 50px;
+}
+#prevBtn {
+	left: 10px;
+	svg {
+		width: 40px;
+	}
+}
+#nextBtn {
+	right: 10px;
+	svg {
+		width: 40px;
+	}
+}
+.project-info {
+	@include hover-effect(#323232);
+	padding: 1rem;
+	border-radius: $border-radius-general;
+}
+.synthocean {
+	@include hover-effect(#0b00e0);
+
+	padding: 1rem;
+	border-radius: $border-radius-general;
+	min-height: 200px;
+	position: relative;
+}
+.nav-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 2rem;
+
+	@media screen and (min-width: 700px) {
+		flex-direction: row;
+		justify-content: center;
+		.btn {
+			min-width: 300px;
+		}
+	}
+}
+
+footer {
+	background-color: $primary-color;
+	text-align: center;
+	font-size: 1.5rem;
+
+	.bold {
+		padding-block: 150px;
+		@media screen and (min-width: 700px) {
+			padding-block: 50px;
+		}
+	}
+}
+
+@keyframes autoShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

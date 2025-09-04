@@ -8,24 +8,28 @@
 		<meta property="og:description" content="An overview of my services" />
 		<meta property="og:url" content="cesarsullen.github.io" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="./assets/icon.JPG" />
+		<meta property="og:image" content="./assets/icons/logo.jpg" />
 
-		<link rel="icon" type="image/jpg" href="./assets/icon.JPG" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.JPG" />
-		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="icon" type="image/jpg" href="./assets/icons/logo.jpg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/icons/logo.jpg"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>Cesar Sullen</title>
 	</head>
 	<body>
 		<div class="body-container">
 			<div class="hero-section section">
 				<!-- Left Column -->
-				<div class="hero-img">
+				<div class="hero-img show-down">
 					<img src="./assets/anime-character.GIF" />
 				</div>
 
 				<!-- Right Column -->
 				<div class="hero-content">
-					<div class="hero-title">
+					<div class="hero-title show-up">
 						<h1 class="section-title">
 							Hey!
 							<br />
@@ -65,28 +69,31 @@
 								<img src="./assets/logos/starjewels.png" alt="Slide 5" />
 							</div>
 							<div class="item" style="--position: 6">
-								<img src="./assets/logos/kiss-logo.png" alt="Slide 6" />
+								<img src="./assets/logos/corvempa-logo.png" alt="Slide 6" />
+							</div>
+							<div class="item" style="--position: 7">
+								<img src="./assets/logos/monced-logo.png" alt="Slide 6" />
 							</div>
 						</div>
 					</a>
 
 					<div class="buttons">
-						<a href="#about"><button class="btn">Contact Me</button></a>
+						<a href="#about"><button class="btn show-up">Contact Me</button></a>
 						<a href="./docs/CV.pdf"
-							><button class="btn btn-ghost">Download CV</button></a
+							><button class="btn btn-ghost show-up">Download CV</button></a
 						>
 					</div>
 				</div>
 			</div>
 
-			<h1 class="section-title">Services</h1>
+			<h1 class="section-title show-up">Services</h1>
 
 			<div id="portfolio" class="services-section section">
 				<!-- Front-End Card -->
 
-				<div class="service-card">
+				<div class="service-card bounce-in">
 					<div class="card-header">
-						<img src="./assets/layout-fill.svg" alt="" srcset="" />
+						<img src="./assets/icons/layout-fill.svg" alt="" srcset="" />
 					</div>
 					<div class="card-body">
 						<h3 class="card-title important-text styled-text">Stack</h3>
@@ -99,9 +106,9 @@
 
 				<!-- Back-End Card -->
 
-				<div class="service-card">
+				<div class="service-card bounce-in">
 					<div class="card-header">
-						<img src="./assets/hard-drives-fill.svg" alt="" srcset="" />
+						<img src="./assets/icons/hard-drives-fill.svg" alt="" srcset="" />
 					</div>
 					<div class="card-body">
 						<h3 class="card-title important-text styled-text">Design</h3>
@@ -114,9 +121,9 @@
 
 				<!-- Responsive Card -->
 
-				<div class="service-card">
+				<div class="service-card bounce-in">
 					<div class="card-header justify-content-center">
-						<img src="./assets/devices-fill.svg" alt="" srcset="" />
+						<img src="./assets/icons/devices-fill.svg" alt="" srcset="" />
 					</div>
 					<div class="card-body">
 						<h3 class="card-title important-text styled-text">Responsive</h3>
@@ -128,11 +135,11 @@
 				</div>
 			</div>
 
-			<h1 class="section-title">Portfolio</h1>
+			<h1 class="section-title show-up">Portfolio</h1>
 
 			<div id="portfolio" class="portfolio-section section">
 				<div class="carousel">
-					<div class="carousel-images">
+					<div class="carousel-images rotate-left">
 						<a href="https://getbaxar.com/baxar" tarjet="_blank">
 							<img
 								class="carousel-img"
@@ -190,20 +197,20 @@
 					<img
 						id="prevBtn"
 						class="control-btn"
-						src="./assets/arrow-circle-left.svg"
+						src="./assets/icons/arrow-circle-left.svg"
 					/>
 
 					<img
 						id="nextBtn"
 						class="control-btn"
-						src="./assets/arrow-circle-right.svg"
+						src="./assets/icons/arrow-circle-right.svg"
 					/>
 				</div>
-				<div class="project-info">
+				<div class="project-info rotate-right">
 					<h2 class="project-title"></h2>
 					<p class="project-description"></p>
 				</div>
-				<a href="https://synthocean.com" class="synthocean"
+				<a href="https://synthocean.com" class="synthocean rotate-right"
 					><h2>SynthOcean</h2>
 					<p>
 						SynthOcean is an ongoing team project still in development, so don’t
@@ -213,17 +220,17 @@
 				</a>
 			</div>
 
-			<h1 class="section-title">About Me</h1>
+			<h1 class="section-title show-up">About Me</h1>
 			<div id="about" class="section">
 				<div class="nav-btn">
 					<a href="mailto:cesarsullen@proton.me"
-						><button class="btn">E-mail</button></a
+						><button class="btn bounce-in">E-mail</button></a
 					>
 					<a href="./links.html"
-						><button class="btn btn-ghost">My Links</button></a
+						><button class="btn btn-ghost bounce-in">My Links</button></a
 					>
 					<a href="https://github.com/CesarSullen"
-						><button class="btn btn-ghost">My GitHub</button></a
+						><button class="btn btn-ghost bounce-in">My GitHub</button></a
 					>
 				</div>
 			</div>

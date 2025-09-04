@@ -1,0 +1,172 @@
+.magic-effect {
+	position: relative;
+
+	&::after,
+	&::before {
+		content: "\2726";
+		font-size: 2rem;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		opacity: 0;
+		transition: all 0.3s ease;
+		pointer-events: none;
+	}
+
+	&:hover,
+	&:active {
+		&::before {
+			opacity: 1;
+			top: -30px;
+			left: -30px;
+			bottom: unset;
+			right: unset;
+			transform: rotate(360deg);
+		}
+
+		&::after {
+			opacity: 1;
+			top: unset;
+			left: unset;
+			bottom: -30px;
+			right: -30px;
+			transform: rotate(360deg);
+		}
+	}
+}
+
+@keyframes autoRun {
+	from {
+		left: 100%;
+	}
+	to {
+		left: calc(var(--width) * -1);
+	}
+}
+
+.show-up,
+.show-down,
+.show-left,
+.show-right,
+.bounce-in,
+.rotate-left,
+.rotate-right {
+	opacity: 0;
+}
+
+.animated {
+	opacity: 1;
+
+	&.show-up {
+		animation: showUp 0.5s forwards;
+	}
+	&.show-down {
+		animation: showDown 0.5s forwards;
+	}
+	&.show-left {
+		animation: showLeft 0.5s forwards;
+	}
+	&.show-right {
+		animation: showRight 0.5s forwards;
+	}
+	&.bounce-in {
+		animation: bounceIn 0.5s forwards;
+	}
+	&.rotate-left {
+		animation: rotateLeft 0.5s forwards;
+	}
+	&.rotate-right {
+		animation: rotateRight 0.5s forwards;
+	}
+}
+
+/* ---------------------
+   Keyframes
+--------------------- */
+
+@keyframes showUp {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes showDown {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes showLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes showRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	80% {
+		transform: scale(0.95);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateLeft {
+	0% {
+		transform: translateX(-100%) rotate(-45deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) rotate(0deg);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateRight {
+	0% {
+		transform: translateX(100%) rotate(45deg);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0) rotate(0deg);
+		opacity: 1;
+	}
+}

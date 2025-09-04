@@ -109,6 +109,22 @@
   box-shadow: 0 4px 12px rgba(98, 1, 222, 0.3);
   transform: translateY(-2px);
 }
+.btn-ghost:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background: #6201de;
+  transform: translate(0%, -50%);
+  transition: width 0.6s ease;
+  z-index: -1;
+}
+.btn-ghost:hover:after {
+  width: 100%;
+  pointer-events: none;
+}
 .btn-ghost:active {
   transform: scale(0.95);
   box-shadow: none;
@@ -167,20 +183,128 @@ body {
   transform: rotate(360deg);
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes autoRun {
   from {
     left: 100%;
   }
   to {
     left: calc(var(--width) * -1);
+  }
+}
+.show-up,
+.show-down,
+.show-left,
+.show-right,
+.bounce-in,
+.rotate-left,
+.rotate-right {
+  opacity: 0;
+}
+
+.animated {
+  opacity: 1;
+}
+.animated.show-up {
+  animation: showUp 0.5s forwards;
+}
+.animated.show-down {
+  animation: showDown 0.5s forwards;
+}
+.animated.show-left {
+  animation: showLeft 0.5s forwards;
+}
+.animated.show-right {
+  animation: showRight 0.5s forwards;
+}
+.animated.bounce-in {
+  animation: bounceIn 0.5s forwards;
+}
+.animated.rotate-left {
+  animation: rotateLeft 0.5s forwards;
+}
+.animated.rotate-right {
+  animation: rotateRight 0.5s forwards;
+}
+
+/* ---------------------
+   Keyframes
+--------------------- */
+@keyframes showUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes showLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    transform: translateX(-100%) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateRight {
+  0% {
+    transform: translateX(100%) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
   }
 }
 .profile {
@@ -434,6 +558,7 @@ body {
   left: 100%;
   animation: autoRun 5s linear infinite;
   animation-delay: calc(6s / var(--quantity) * (var(--position) - 1)) !important; /* Retraso dinámico según posición */
+  background: #191818;
 }
 .item img {
   width: 100%;
