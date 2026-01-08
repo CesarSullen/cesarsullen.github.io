@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta property="og:title" content="Crypto Donations" />
+		<meta
+			property="og:description"
+			content="Support this project with crypto donations"
+		/>
+		<meta property="og:url" content="cesarsullen.github.io" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="../assets/icons/logo.jpg" />
+
+		<link rel="icon" type="image/jpg" href="../assets/icons/logo.jpg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../assets/icons/logo.jpg"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Donations</title>
+	</head>
+
+	<!-- ICONS BY https://www.flaticon.com/authors/bouzix -->
+
+	<body>
+		<div class="body-container">
+			<section class="section donations-intro">
+				<h1 class="section-title">Donations</h1>
+				<p>
+					If you find this project useful and would like to support its
+					development, you can do so via
+					<span class="important-text bold">cryptocurrency donations</span>.
+				</p>
+			</section>
+
+			<div class="donations-container">
+				<section class="section donation-card">
+					<div class="donation-header">
+						<img
+							src="../assets/icons/crypto/bitcoin.png"
+							alt="Bitcoin icon"
+							class="donation-icon"
+						/>
+						<h2 class="donation-title">Bitcoin (BTC)</h2>
+					</div>
+
+					<p class="wallet-address" id="btc-address">
+						1LGtFBcZKV9dqeMQXwcafMWYajF59v9jYW
+					</p>
+
+					<button class="btn btn-ghost copy-btn" data-target="btc-address">
+						Copy address
+					</button>
+				</section>
+
+				<section class="section donation-card">
+					<div class="donation-header">
+						<img
+							src="../assets/icons/crypto/ethereum.png"
+							alt="Ethereum icon"
+							class="donation-icon"
+						/>
+						<h2 class="donation-title">Ethereum (ERC20)</h2>
+					</div>
+
+					<p class="wallet-address" id="eth-address">
+						0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661
+					</p>
+
+					<button class="btn btn-ghost copy-btn" data-target="eth-address">
+						Copy address
+					</button>
+				</section>
+
+				<section class="section donation-card">
+					<div class="donation-header">
+						<img
+							src="../assets/icons/crypto/usdt.png"
+							alt="USDT icon"
+							class="donation-icon"
+						/>
+						<h2 class="donation-title">USDT (TRC20)</h2>
+					</div>
+
+					<p class="wallet-address" id="usdt-address">
+						THqMzTofowkZ9VKJFn26qdUWGt6yr2cqn5
+					</p>
+
+					<button class="btn btn-ghost copy-btn" data-target="usdt-address">
+						Copy address
+					</button>
+				</section>
+
+				<section class="section donation-card">
+					<div class="donation-header">
+						<img
+							src="../assets/icons/crypto/usdc.png"
+							alt="USDC icon"
+							class="donation-icon"
+						/>
+						<h2 class="donation-title">USDC (ERC20)</h2>
+					</div>
+
+					<p class="wallet-address" id="usdc-address">
+						0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661
+					</p>
+
+					<button class="btn btn-ghost copy-btn" data-target="usdc-address">
+						Copy address
+					</button>
+				</section>
+			</div>
+		</div>
+
+		<footer>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path
+					fill="#191818"
+					fill-opacity="1"
+					d="M0,288L48,277.3C96,267,192,245,288,240C384,235,480,245,576,224C672,203,768,149,864,160C960,171,1056,245,1152,272C1248,299,1344,277,1392,266.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+				></path>
+			</svg>
+			<div class="bold">
+				<a href="mailto:sullen@synthocean.com">sullen@synthocean.com</a>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll(".copy-btn").forEach((btn) => {
+				btn.addEventListener("click", () => {
+					const targetId = btn.getAttribute("data-target");
+					const text = document.getElementById(targetId).innerText;
+
+					navigator.clipboard.writeText(text).then(() => {
+						const original = btn.innerText;
+						btn.innerText = "Copied ✓";
+
+						setTimeout(() => {
+							btn.innerText = original;
+						}, 1500);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
