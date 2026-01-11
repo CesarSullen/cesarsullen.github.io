@@ -308,28 +308,35 @@ body {
   }
 }
 .profile {
-  background: linear-gradient(to bottom right, #6201de 40%, rgb(251, 45, 80));
   margin-bottom: 1rem;
+  background-color: rgb(19.7959183673, 19.0040816327, 19.0040816327);
   border-radius: 15px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: solid 2px #6201de;
+  letter-spacing: 1px;
   width: 100%;
-}
-.profile:hover {
-  box-shadow: 0px 2px 15px #6201de;
-  transform: translateY(-5px);
+  transition: all 0.2s;
+  box-shadow: 5px 5px 0px 0px #6201de;
 }
 .profile li:before {
   content: "❖";
   margin-right: 5px;
+  color: #6201de;
 }
 .profile .btn {
-  background-color: white;
-  border-radius: 100vh;
+  background: transparent;
+  border: solid 2px #6201de;
   color: #6201de;
-  border: none;
+}
+.profile .btn:hover {
+  box-shadow: none;
+}
+.profile:has(.btn:hover) {
+  box-shadow: none;
+  translate: 5px 5px;
 }
 @media screen and (min-width: 700px) {
   .profile {
@@ -352,6 +359,7 @@ body {
   font-size: 1.2rem;
 }
 .profile-info h2 {
+  color: #6201de;
   font-family: "PoetsenOne";
   letter-spacing: 2px;
 }
@@ -394,6 +402,7 @@ body {
   letter-spacing: 1px;
   width: 100%;
   flex-direction: column;
+  transition: all 0.2s;
 }
 .card img {
   border-radius: 8px;
@@ -403,13 +412,14 @@ body {
   font-size: 1.5rem;
   color: #6201de;
 }
+.card:hover {
+  transform: scale(1.1);
+  translate: 5px 5px;
+  box-shadow: none;
+}
 @media screen and (min-width: 700px) {
   .card .title {
     font-size: 1.2rem;
-  }
-  .card:hover {
-    transform: scale(1.1);
-    box-shadow: none;
   }
 }
 
