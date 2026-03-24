@@ -894,18 +894,18 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
   }
+  .portfolio-section .project-info {
+    grid-column: 2;
+    font-size: 0.9rem;
+  }
+  .portfolio-section .synthocean {
+    grid-column: 2;
+    font-size: 0.95rem;
+  }
 }
 .portfolio-section .carousel {
   grid-column: 1;
   grid-row: 1/span 2;
-}
-.portfolio-section .project-info {
-  grid-column: 2;
-  font-size: 0.9rem;
-}
-.portfolio-section .synthocean {
-  grid-column: 2;
-  font-size: 0.95rem;
 }
 
 .carousel {

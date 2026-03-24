@@ -37,7 +37,7 @@ const projects = [
 		description:
 			"Offering unique silver jewelry, infused with intention, glamour, and balance.",
 		image: "./assets/banners/starjewels.png",
-		url: "https://starjewels.baxarnetwork.com",
+		url: "https://cesarsullen.github.io/starjewels-2.0",
 	},
 	{
 		id: "sophiemystique",
@@ -53,7 +53,7 @@ const projects = [
 		description:
 			"The Witcher API is an ongoing team project, currently under development.",
 		image: "./assets/banners/witcher.png",
-		url: "https://thewitcherapi.baxarnetwork.com/",
+		url: "https://cesarsullen.github.io/thewitcher-api/",
 	},
 	{
 		id: "baya",
@@ -112,7 +112,7 @@ updateProjectInfo();
 
 // Interception Observer
 const animatedElements = document.querySelectorAll(
-	".show-up, .show-down, .show-left, .show-right, .bounce-in, .rotate-left, .rotate-right"
+	".show-up, .show-down, .show-left, .show-right, .bounce-in, .rotate-left, .rotate-right",
 );
 
 const observer = new IntersectionObserver(
@@ -124,7 +124,21 @@ const observer = new IntersectionObserver(
 			}
 		});
 	},
-	{ root: null, rootMargin: "0px", threshold: 0.2 }
+	{ root: null, rootMargin: "0px", threshold: 0.2 },
 );
 
 animatedElements.forEach((el) => observer.observe(el));
+
+async function trackProjectActivity(projectName) {
+	try {
+		const { error } = await _supabase.rpc("increment_visit", {
+			name_param: projectName,
+		});
+
+		if (error) throw error;
+	} catch (err) {
+		console.warn("Offline mode");
+	}
+}
+
+trackProjectActivity("Portfolio");

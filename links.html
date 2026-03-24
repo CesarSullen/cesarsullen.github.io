@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -28,7 +28,7 @@
 						<ul>
 							<li>Web Developer</li>
 							<li>UI/UX Designer</li>
-							<li>3 Years of XP</li>
+							<li>4 Years of XP</li>
 						</ul>
 					</div>
 				</div>
@@ -78,7 +78,7 @@
 						</a>
 
 						<a
-							href="mailto:sullen@synthocean.com"
+							href="mailto:cesarsullen@proton.me"
 							class="contact-card card bounce-in"
 						>
 							<img
@@ -170,7 +170,7 @@
 							<h3 class="title">Monced House</h3>
 						</a>
 						<a
-							href="https://thestarjewels.com"
+							href="https://cesarsullen.github.io/starjewels-2.0"
 							class="work-card card bounce-in"
 						>
 							<img
@@ -181,7 +181,7 @@
 							<h3 class="title">Star Jewel's</h3>
 						</a>
 						<a
-							href="https://thewitcherapi.baxarnetwork.com"
+							href="https://cesarsullen.github.io/thewitcher-api"
 							class="work-card card bounce-in"
 						>
 							<img
@@ -284,7 +284,7 @@
 
 		<script>
 			const animatedElements = document.querySelectorAll(
-				".show-up, .show-down, .show-left, .show-right, .bounce-in, .rotate-left, .rotate-right"
+				".show-up, .show-down, .show-left, .show-right, .bounce-in, .rotate-left, .rotate-right",
 			);
 
 			const observer = new IntersectionObserver(
@@ -296,7 +296,7 @@
 						}
 					});
 				},
-				{ root: null, rootMargin: "0px", threshold: 0.2 }
+				{ root: null, rootMargin: "0px", threshold: 0.2 },
 			);
 
 			animatedElements.forEach((el) => observer.observe(el));
