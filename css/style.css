@@ -792,9 +792,6 @@ button:focus-visible {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 15px;
 }
-.side-projects-container :last-child {
-	grid-column: span 2;
-}
 @media screen and (min-width: 768px) {
 	.side-projects-container {
 		grid-template-columns: repeat(3, 1fr);
