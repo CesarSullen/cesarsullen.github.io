@@ -15,12 +15,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PoetsenOne";
-  src: url("../fonts/PoetsenOne-Regular.ttf") format("truetype");
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 .important-text {

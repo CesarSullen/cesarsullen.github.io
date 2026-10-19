@@ -199,3 +199,19 @@ document
 document
   .querySelector(".strip-next")
   .addEventListener("click", () => strip.scrollBy({ left: step() }));
+
+async function trackProjectActivity(projectName) {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_visit`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: SUPABASE_KEY },
+      body: JSON.stringify({ name_param: projectName }),
+      keepalive: true,
+    });
+    if (!res.ok) throw new Error(res.status);
+  } catch (err) {
+    console.warn("Offline mode");
+  }
+}
+
+trackProjectActivity("Portfolio");
