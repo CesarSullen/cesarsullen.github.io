@@ -1,0 +1,504 @@
+body {
+  background: var(--cream-2);
+}
+.page {
+  padding-top: 1.75rem;
+  padding-bottom: 3rem;
+}
+.page .sec-head h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  -webkit-text-stroke: 0.03em currentColor;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+  line-height: 1.15;
+}
+.page .intro {
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #5f5347;
+  margin-top: 1.4rem;
+}
+.page .intro strong,
+.donation-card p strong,
+.platform-card p strong {
+  font-weight: 400;
+  color: var(--brown);
+  border-bottom: 0.06rem solid #cdbca4;
+}
+.pill-md {
+  height: 2.9rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.block {
+  margin-top: 2.75rem;
+}
+.block:first-of-type {
+  margin-top: 2.25rem;
+}
+
+/* PROFILE & LINKS */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  text-align: center;
+}
+.profile-img {
+  width: 9.5rem;
+  height: 9.5rem;
+  object-fit: cover;
+  border: 0.55rem solid #fbf8f1;
+  box-shadow: 0 0.3rem 0.8rem rgba(80, 60, 40, 0.14);
+  transform: rotate(-3deg);
+  background: #fbf8f1;
+}
+.profile h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  -webkit-text-stroke: 0.03em currentColor;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+}
+.profile ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0.7rem 0 1.4rem;
+  font-family: var(--body);
+  font-size: 0.95rem;
+  color: #5f5347;
+}
+.profile .actions {
+  justify-content: center;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+}
+.tile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 6.5rem;
+  padding: 0.6rem 0.4rem;
+  background: #f8f4eb;
+  border: 0.06rem solid var(--line);
+  border-radius: 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  transition: border-color 0.2s;
+}
+.tile-card .ico {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.5rem;
+}
+/* SOCIAL STRIPS */
+.tiles-strips {
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+.tiles-strips .tile-card {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-height: 3.6rem;
+  padding: 0.55rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 0.8rem;
+}
+.tiles-strips .tile-card .ico {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+.tiles-strips .tile-card::after {
+  content: "";
+  margin-left: auto;
+  width: 1.05rem;
+  height: 0.9rem;
+  background: var(--ink-soft);
+  -webkit-mask: url("../assets/icons/ui/arrow-right.svg") center/contain
+    no-repeat;
+  mask: url("../assets/icons/ui/arrow-right.svg") center/contain no-repeat;
+}
+.works {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-top: 1.4rem;
+}
+.work-card {
+  display: block;
+  background: var(--card);
+  border: 0.06rem solid var(--line);
+  border-radius: 1rem;
+  padding: 0.35rem 0.35rem 1rem;
+  transition: border-color 0.2s;
+}
+.work-img {
+  height: 10.5rem;
+  border-radius: 0.75rem;
+}
+.work-card span {
+  display: block;
+  margin: 0.85rem 0 0 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* DONATIONS & PWA INSTALL */
+.donations,
+.platforms {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+}
+.donation-card,
+.platform-card {
+  background: var(--card);
+  border: 0.06rem solid var(--line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: border-color 0.2s;
+}
+.donation-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.donation-header .ico {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+}
+.donation-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.wallet-address {
+  font-family: var(--body);
+  font-size: 0.85rem;
+  line-height: 1.35rem;
+  color: #5f5347;
+  word-break: break-all;
+  margin: 1.1rem 0 1.1rem;
+  padding: 0.9rem 1rem;
+  background: #f4ede0;
+  border-radius: 0.6rem;
+  user-select: all;
+}
+.copy-btn {
+  width: 100%;
+}
+.platform-card p {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #5f5347;
+  margin-top: 1rem;
+}
+.steps {
+  margin: 1rem 0 0 1.4rem;
+  font-family: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+  color: #5f5347;
+  list-style: decimal;
+}
+.steps li {
+  padding-left: 0.2rem;
+}
+.steps li::marker {
+  color: var(--brown);
+}
+
+/* DESKTOP */
+@media (min-width: 761px) {
+  body {
+    background: var(--cream-2);
+  }
+  .page {
+    min-height: 60rem;
+    padding-top: 3.4rem;
+    padding-bottom: 4rem;
+  }
+  .page .sec-head h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    -webkit-text-stroke: 0.03em currentColor;
+    letter-spacing: 0.06em;
+    margin-top: 0.3rem;
+    line-height: 1.1;
+  }
+  .page .intro {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: #5f5347;
+    max-width: 58rem;
+    margin-top: 2rem;
+  }
+  .page .intro strong,
+  .donation-card p strong,
+  .platform-card p strong {
+    font-weight: 400;
+    color: var(--brown);
+    border-bottom: 0.1rem solid #cdbca4;
+  }
+  .pill-md {
+    height: 3.2rem;
+    padding: 0 2rem;
+    font-size: 1.15rem;
+  }
+  .actions {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+  }
+  .block {
+    margin-top: 5rem;
+  }
+  .block:first-of-type {
+    margin-top: 4rem;
+  }
+
+  /* PROFILE & LINKS */
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+  }
+  .profile-img {
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    border: 0.9rem solid #fbf8f1;
+    box-shadow: 0 0.4rem 1rem rgba(80, 60, 40, 0.14);
+    transform: rotate(-3deg);
+    background: #fbf8f1;
+  }
+  .profile h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    -webkit-text-stroke: 0.03em currentColor;
+    letter-spacing: 0.05em;
+  }
+  .profile ul {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 2.2rem;
+    font-family: var(--body);
+    font-size: 1.1rem;
+    color: #5f5347;
+  }
+  .profile li + li::before {
+    content: "·";
+    margin-right: 1.4rem;
+  }
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.4rem;
+    margin-top: 2.4rem;
+  }
+  .tile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    height: 11rem;
+    background: #f8f4eb;
+    border: 0.1rem solid var(--line);
+    border-radius: 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 0.8rem;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+  .tile-card:hover,
+  .work-card:hover,
+  .donation-card:hover {
+    transform: translateY(-0.3rem);
+    border-color: #cdbca4;
+  }
+  .tile-card .ico {
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 0.8rem;
+  }
+  .works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.3rem;
+    margin-top: 2.4rem;
+  }
+  .work-card {
+    display: block;
+    background: var(--card);
+    border: 0.1rem solid var(--line);
+    border-radius: 1.3rem;
+    padding: 0.5rem 0.5rem 1.4rem;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+  .work-img {
+    height: 13rem;
+    border-radius: 0.9rem;
+  }
+  .work-card span {
+    display: block;
+    margin: 1.2rem 0 0 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  /* DONATIONS & PWA INSTALL */
+  .donations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.3rem;
+    margin-top: 3rem;
+  }
+  .donation-card,
+  .platform-card {
+    background: var(--card);
+    border: 0.1rem solid var(--line);
+    border-radius: 1.3rem;
+    padding: 2rem 2.2rem;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+  .donation-header {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .donation-header .ico {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+  .donation-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .wallet-address {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+    color: #5f5347;
+    word-break: break-all;
+    margin: 1.6rem 0 1.8rem;
+    padding: 1.2rem 1.4rem;
+    background: #f4ede0;
+    border-radius: 0.8rem;
+  }
+  .platforms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.3rem;
+    margin-top: 3rem;
+  }
+  .platform-card p {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.7rem;
+    color: #5f5347;
+    margin-top: 1.4rem;
+  }
+  .steps {
+    margin: 1.6rem 0 0 2rem;
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.8rem;
+    color: #5f5347;
+    list-style: decimal;
+  }
+  .steps li::marker {
+    color: var(--brown);
+  }
+
+  /* RESETS */
+  .page .intro {
+    line-height: 1.8rem;
+  }
+  .profile {
+    flex-direction: row;
+    text-align: left;
+  }
+  .profile h1 {
+    line-height: normal;
+  }
+  .profile ul {
+    flex-direction: row;
+    align-items: normal;
+    justify-content: flex-start;
+    gap: 1.4rem;
+  }
+  .profile .actions {
+    justify-content: flex-start;
+  }
+  .tile-card {
+    min-height: 0;
+    line-height: normal;
+  }
+  .tiles-strips {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.4rem;
+  }
+  .tiles-strips .tile-card {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.1rem;
+    min-height: 0;
+    padding: 0 0.8rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 1.1rem;
+  }
+  .tiles-strips .tile-card .ico {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+  .tiles-strips .tile-card::after {
+    display: none;
+  }
+  .donation-header .ico {
+    flex: none;
+  }
+  .wallet-address {
+    user-select: auto;
+  }
+  .copy-btn {
+    width: auto;
+  }
+  .steps li {
+    padding-left: 0;
+  }
+}

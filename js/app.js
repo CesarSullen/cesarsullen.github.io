@@ -1,119 +1,201 @@
-const carouselImages = document.querySelector(".carousel-images");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
-const projectTitle = document.querySelector(".project-title");
-const projectDescription = document.querySelector(".project-description");
-
 const projects = [
-	{
-		id: "stox",
-		title: "STOX",
-		description:
-			"STOX is a complete ecosystem for businesses with one or several points of sale: the owner manages from STOX and his employees operate from SELY, all optionally synchronized by the cloud.",
-		image: "./assets/images/banners/stox.png",
-		url: "https://cesarsullen.github.io/stox/",
-	},
-	{
-		id: "radiocast",
-		title: "RadioCast",
-		description:
-			"Radiocast is a practice project hosted on GitHub Pages, created as a personal exercise where users can listen to radio music for free. It offers a simple interface to enjoy a curated selection of radio stations.",
-		image: "./assets/images/banners/radiocast.png",
-		url: "https://cesarsullen.github.io/radiocast/",
-	},
-	{
-		id: "pokedex",
-		title: "Pokédex",
-		description:
-			"Pokedex is a practice project hosted on GitHub Pages, developed as a personal exercise to create a digital catalog of Pokémon.",
-		image: "./assets/images/banners/pokedex.png",
-		url: "https://cesarsullen.github.io/pokedex",
-	},
-	{
-		id: "baxar",
-		title: "Baxar",
-		description:
-			"Baxar is an online marketplace designed to provide a wide range of quality products at affordable prices, with a focus on accessibility and convenience. Targeting cuban market, it offers an e-commerce platform where users can browse and purchase goods digitally.",
-		image: "./assets/images/banners/baxar.png",
-		url: "https://getbaxar.com/baxar",
-	},
-	{
-		id: "kuic",
-		title: "Kuic",
-		description:
-			"It's a Kanban-type task management application designed with privacy first and completely offline operation. Create, edit, and delete custom columns and tasks, assign due dates, and mark progress with dynamic counters for pending and completed tasks.",
-		image: "./assets/images/banners/kuic.png",
-		url: "https://cesarsullen.github.io/kuic",
-	},
-	{
-		id: "sophiemystique",
-		title: "Sophie Mystique",
-		description:
-			"Sophie Mystique was my first sold project, a personal website created for a singer.",
-		image: "./assets/images/banners/sophiemystique.png",
-		url: "https://sophiemystique.com/",
-	},
-	{
-		id: "witcher",
-		title: "The Witcher API",
-		description:
-			"The Witcher API is an ongoing team project, currently under development.",
-		image: "./assets/images/banners/witcher.png",
-		url: "https://cesarsullen.github.io/thewitcher-api/",
-	},
+  {
+    id: "stox",
+    name: "STOX",
+    text: "STOX is a complete ecosystem for businesses with one or several points of sale: the owner manages from STOX and his employees operate from SELY, all optionally synchronized by the cloud.",
+    img: "./assets/images/banners/stox.png",
+    href: "https://cesarsullen.github.io/stox/",
+  },
+  {
+    id: "synthocean",
+    name: "SynthOcean",
+    text: "SynthOcean is an ongoing team project still in development, so don’t judge the design too harshly. We’re crafting something cool, and I’ve included it here to share the journey.",
+    img: "./assets/images/banners/synthocean.jpg",
+    href: "https://synthocean.com",
+    dev: true,
+  },
+  {
+    id: "radiocast",
+    name: "RadioCast",
+    text: "Radiocast is a practice project hosted on GitHub Pages, created as a personal exercise where users can listen to radio music for free. It offers a simple interface to enjoy a curated selection of radio stations.",
+    img: "./assets/images/banners/radiocast.png",
+    href: "https://cesarsullen.github.io/radiocast/",
+  },
+  {
+    id: "pokedex",
+    name: "Pokédex",
+    text: "Pokedex is a practice project hosted on GitHub Pages, developed as a personal exercise to create a digital catalog of Pokémon.",
+    img: "./assets/images/banners/pokedex.png",
+    href: "https://cesarsullen.github.io/pokedex",
+  },
+  {
+    id: "baxar",
+    name: "Baxar",
+    text: "Baxar is an online marketplace designed to provide a wide range of quality products at affordable prices, with a focus on accessibility and convenience. Targeting cuban market, it offers an e-commerce platform where users can browse and purchase goods digitally.",
+    img: "./assets/images/banners/baxar.png",
+    href: "https://getbaxar.com/baxar",
+  },
+  {
+    id: "kuic",
+    name: "Kuic",
+    text: "It's a Kanban-type task management application designed with privacy first and completely offline operation. Create, edit, and delete custom columns and tasks, assign due dates, and mark progress with dynamic counters for pending and completed tasks.",
+    img: "./assets/images/banners/kuic.png",
+    href: "https://cesarsullen.github.io/kuic",
+  },
+  {
+    id: "sophiemystique",
+    name: "Sophie Mystique",
+    text: "Sophie Mystique was my first sold project, a personal website created for a singer.",
+    img: "./assets/images/banners/sophiemystique.png",
+    href: "https://sophiemystique.com/",
+  },
+  {
+    id: "witcher",
+    name: "The Witcher API",
+    text: "The Witcher API is an ongoing team project, currently under development.",
+    img: "./assets/images/banners/witcher.png",
+    href: "https://cesarsullen.github.io/thewitcher-api/",
+    dev: true,
+  },
 ];
 
-function buildCarousel() {
-	projects.forEach((project) => {
-		const link = document.createElement("a");
-		link.href = project.url;
-		link.target = "_blank";
-		link.rel = "noopener noreferrer";
-		link.dataset.project = project.id;
+const track = document.getElementById("carTrack");
+const dotsBox = document.getElementById("carDots");
+const desktop = matchMedia("(min-width: 761px)");
+let active = 1;
+let current = 0;
 
-		const img = document.createElement("img");
-		img.src = project.image;
-		img.alt = project.title;
-		img.className = "carousel-img";
+const slots = { "-1": "-.2rem", 0: "23.1rem", 1: "47.6rem" };
 
-		link.appendChild(img);
-		carouselImages.appendChild(link);
-	});
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text) e.textContent = text;
+  return e;
 }
 
-function updateProjectInfo() {
-	const activeSlide = carouselImages.firstElementChild;
-	const projectId = activeSlide.dataset.project;
-	const project = projects.find((p) => p.id === projectId);
-	if (!project) return;
-
-	projectTitle.textContent = project.title;
-	projectDescription.textContent = project.description;
+function build() {
+  projects.forEach((p, i) => {
+    const card = el("article", "pcard");
+    card.dataset.i = i;
+    const img = el("div", "ph pimg");
+    img.style.backgroundImage = `url("${p.img}"), linear-gradient(135deg,#e9dcc6,#d9c7a8)`;
+    if (p.dev) img.appendChild(el("span", "badge", "Currently in development"));
+    const link = el("a", "pill pill-outline", "View project ");
+    link.href = p.href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.appendChild(el("i", "mask i-arrow"));
+    const text = el("p", "", p.text);
+    text.title = p.text;
+    card.append(img, el("h4", "", p.name), text, link);
+    track.appendChild(card);
+    const dot = el("button");
+    dot.type = "button";
+    dot.dataset.i = i;
+    dot.setAttribute("aria-label", `Project ${i + 1}`);
+    dotsBox.appendChild(dot);
+  });
+  render();
 }
 
-function showNextProject() {
-	carouselImages.append(carouselImages.firstElementChild);
-	updateProjectInfo();
+function markActive(i, dotIndex) {
+  track.querySelectorAll(".pcard").forEach((card) => {
+    const on = Number(card.dataset.i) === i;
+    card.classList.toggle("is-active", on);
+    const btn = card.querySelector(".pill");
+    btn.classList.toggle("pill-brown", on);
+    btn.classList.toggle("pill-outline", !on);
+  });
+  dotsBox
+    .querySelectorAll("button")
+    .forEach((b, k) => b.classList.toggle("on", k === dotIndex));
 }
 
-function showPreviousProject() {
-	carouselImages.prepend(carouselImages.lastElementChild);
-	updateProjectInfo();
+function renderDesktop() {
+  const n = projects.length;
+  track.querySelectorAll(".pcard").forEach((card) => {
+    const i = Number(card.dataset.i);
+    const off = ((i - active + n + Math.floor(n / 2)) % n) - Math.floor(n / 2);
+    const visible = off >= -1 && off <= 1;
+    card.style.left = visible ? slots[off] : "100rem";
+    card.style.opacity = visible ? 1 : 0;
+    card.style.pointerEvents = visible ? "auto" : "none";
+  });
+  markActive(active, (active - 1 + n) % n);
 }
 
-async function trackProjectActivity(projectName) {
-	try {
-		const { error } = await _supabase.rpc("increment_visit", {
-			name_param: projectName,
-		});
-		if (error) throw error;
-	} catch (err) {
-		console.warn("Offline mode");
-	}
+function renderMobile() {
+  track.querySelectorAll(".pcard").forEach((card) => {
+    card.style.left = card.style.opacity = card.style.pointerEvents = "";
+  });
+  markActive(current, current);
 }
 
-buildCarousel();
-updateProjectInfo();
-nextBtn.addEventListener("click", showNextProject);
-prevBtn.addEventListener("click", showPreviousProject);
-trackProjectActivity("Portfolio");
+function render() {
+  desktop.matches ? renderDesktop() : renderMobile();
+}
+
+let ticking = false;
+track.addEventListener(
+  "scroll",
+  () => {
+    if (desktop.matches || ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      const cards = [...track.querySelectorAll(".pcard")];
+      const start = cards[0].offsetLeft;
+      let best = 0;
+      cards.forEach((c, i) => {
+        if (
+          Math.abs(c.offsetLeft - start - track.scrollLeft) <
+          Math.abs(cards[best].offsetLeft - start - track.scrollLeft)
+        )
+          best = i;
+      });
+      if (best !== current) {
+        current = best;
+        markActive(current, current);
+      }
+    });
+  },
+  { passive: true },
+);
+
+const go = (d) => {
+  active = (active + d + projects.length) % projects.length;
+  render();
+};
+document.querySelector(".car-prev").addEventListener("click", () => go(-1));
+document.querySelector(".car-next").addEventListener("click", () => go(1));
+dotsBox.addEventListener("click", (e) => {
+  const b = e.target.closest("button");
+  if (!b) return;
+  const i = Number(b.dataset.i);
+  if (desktop.matches) {
+    active = (i + 1) % projects.length;
+    render();
+  } else {
+    const cards = [...track.querySelectorAll(".pcard")];
+    track.scrollTo({
+      left: cards[i].offsetLeft - cards[0].offsetLeft,
+      behavior: "smooth",
+    });
+  }
+});
+desktop.addEventListener("change", () => {
+  track.scrollLeft = 0;
+  current = 0;
+  render();
+});
+build();
+
+const strip = document.querySelector(".strip-track");
+const step = () => strip.clientWidth / 6;
+document
+  .querySelector(".strip-prev")
+  .addEventListener("click", () => strip.scrollBy({ left: -step() }));
+document
+  .querySelector(".strip-next")
+  .addEventListener("click", () => strip.scrollBy({ left: step() }));

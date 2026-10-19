@@ -1,76 +1,190 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Support this portfolio's development through cryptocurrency donations." />
-<meta property="og:title" content="Crypto Donations" />
-<meta property="og:description" content="Support this project with crypto donations" />
-<meta property="og:url" content="cesarsullen.github.io" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="../assets/opengraph/logo.png" />
-<link rel="icon" type="image/png" href="../assets/opengraph/logo.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="../assets/opengraph/logo.png" />
-<link rel="stylesheet" href="../css/style.css" />
-<title>Donations</title>
-</head>
-<body>
-<div class="container">
-<section class="section donations-intro">
-<h1 class="section-title">Donations</h1>
-<p>
-If you find this project useful and would like to support its
-development, you can do so via
-<strong class="accent-text">cryptocurrency donations</strong>.
-</p>
-</section>
-<div class="donations-container">
-<section class="section donation-card">
-<div class="donation-header">
-<img src="../assets/icons/crypto/bitcoin.png" alt="Bitcoin icon" class="donation-icon" />
-<h2 class="donation-title">Bitcoin (BTC)</h2>
-</div>
-<p class="wallet-address" id="btc-address">1LGtFBcZKV9dqeMQXwcafMWYajF59v9jYW</p>
-<button type="button" class="btn btn-ghost copy-btn" data-target="btc-address">Copy address</button>
-</section>
-<section class="section donation-card">
-<div class="donation-header">
-<img src="../assets/icons/crypto/ethereum.png" alt="Ethereum icon" class="donation-icon" />
-<h2 class="donation-title">Ethereum (ERC20)</h2>
-</div>
-<p class="wallet-address" id="eth-address">0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661</p>
-<button type="button" class="btn btn-ghost copy-btn" data-target="eth-address">Copy address</button>
-</section>
-<section class="section donation-card">
-<div class="donation-header">
-<img src="../assets/icons/crypto/usdt.png" alt="USDT icon" class="donation-icon" />
-<h2 class="donation-title">USDT (TRC20)</h2>
-</div>
-<p class="wallet-address" id="usdt-address">THqMzTofowkZ9VKJFn26qdUWGt6yr2cqn5</p>
-<button type="button" class="btn btn-ghost copy-btn" data-target="usdt-address">Copy address</button>
-</section>
-<section class="section donation-card">
-<div class="donation-header">
-<img src="../assets/icons/crypto/usdc.png" alt="USDC icon" class="donation-icon" />
-<h2 class="donation-title">USDC (ERC20)</h2>
-</div>
-<p class="wallet-address" id="usdc-address">0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661</p>
-<button type="button" class="btn btn-ghost copy-btn" data-target="usdc-address">Copy address</button>
-</section>
-</div>
-</div>
-<footer>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-<path
-fill="#191818"
-fill-opacity="1"
-d="M0,288L48,277.3C96,267,192,245,288,240C384,235,480,245,576,224C672,203,768,149,864,160C960,171,1056,245,1152,272C1248,299,1344,277,1392,266.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-></path>
-</svg>
-<div class="footer-content">
-<a href="mailto:cesarsullen@proton.me">cesarsullen@proton.me</a>
-</div>
-</footer>
-<script src="../js/donations.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Support this portfolio's development through cryptocurrency donations."
+    />
+    <meta property="og:title" content="Donations" />
+    <meta
+      property="og:description"
+      content="Support this portfolio's development through cryptocurrency donations."
+    />
+    <meta
+      property="og:url"
+      content="https://cesarsullen.github.io/views/donations.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://cesarsullen.github.io/assets/opengraph/favicon.png"
+    />
+    <link rel="icon" type="image/png" href="../assets/opengraph/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/opengraph/favicon.png"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <title>Donations</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="../index.html" class="brand">
+        <img class="brand-mark" src="../assets/opengraph/logo.png" alt="" />
+        <span class="brand-name">Saru Koto</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../index.html"
+          ><i class="mask nav-ic ni-home"></i><span>Home</span></a
+        >
+        <a href="../index.html#services"
+          ><i class="mask nav-ic ni-services"></i><span>Services</span></a
+        >
+        <a href="../index.html#skills"
+          ><i class="mask nav-ic ni-skills"></i><span>Skills</span></a
+        >
+        <a href="../index.html#portfolio"
+          ><i class="mask nav-ic ni-portfolio"></i><span>Portfolio</span></a
+        >
+        <a href="../index.html#about"
+          ><i class="mask nav-ic ni-about"></i><span>About</span></a
+        >
+      </nav>
+      <a href="mailto:cesarsullen@proton.me" class="pill pill-brown pill-sm"
+        >Let's talk <i class="mask i-arrow"></i
+      ></a>
+    </header>
+    <main class="page wrap">
+      <header class="sec-head">
+        <small>寄付</small>
+        <h1>Donations</h1>
+        <span class="squig"></span>
+      </header>
+      <p class="intro">
+        If you find this project useful and would like to support its
+        development, you can do so via
+        <strong>cryptocurrency donations</strong>.
+      </p>
+      <div class="donations">
+        <article class="donation-card">
+          <div class="donation-header">
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;../assets/icons/crypto/bitcoin.png&quot;);
+              "
+            ></i>
+            <h2>Bitcoin (BTC)</h2>
+          </div>
+          <p class="wallet-address" id="btc-address">
+            1LGtFBcZKV9dqeMQXwcafMWYajF59v9jYW
+          </p>
+          <button
+            type="button"
+            class="pill pill-outline pill-md copy-btn"
+            data-target="btc-address"
+          >
+            Copy address
+          </button>
+        </article>
+        <article class="donation-card">
+          <div class="donation-header">
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;../assets/icons/crypto/ethereum.png&quot;);
+              "
+            ></i>
+            <h2>Ethereum (ERC20)</h2>
+          </div>
+          <p class="wallet-address" id="eth-address">
+            0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661
+          </p>
+          <button
+            type="button"
+            class="pill pill-outline pill-md copy-btn"
+            data-target="eth-address"
+          >
+            Copy address
+          </button>
+        </article>
+        <article class="donation-card">
+          <div class="donation-header">
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;../assets/icons/crypto/usdt.png&quot;);
+              "
+            ></i>
+            <h2>USDT (TRC20)</h2>
+          </div>
+          <p class="wallet-address" id="usdt-address">
+            THqMzTofowkZ9VKJFn26qdUWGt6yr2cqn5
+          </p>
+          <button
+            type="button"
+            class="pill pill-outline pill-md copy-btn"
+            data-target="usdt-address"
+          >
+            Copy address
+          </button>
+        </article>
+        <article class="donation-card">
+          <div class="donation-header">
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;../assets/icons/crypto/usdc.png&quot;);
+              "
+            ></i>
+            <h2>USDC (ERC20)</h2>
+          </div>
+          <p class="wallet-address" id="usdc-address">
+            0x7ee20F7003CE3dF3E7b3bfC99AD7D8688B453661
+          </p>
+          <button
+            type="button"
+            class="pill pill-outline pill-md copy-btn"
+            data-target="usdc-address"
+          >
+            Copy address
+          </button>
+        </article>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <a href="../index.html" class="brand brand-foot"
+        ><img
+          class="brand-mark"
+          src="../assets/opengraph/logo.png"
+          alt=""
+        /><span class="brand-name">Saru Koto</span></a
+      >
+      <p class="foot-mid">Let's build something nice together.</p>
+      <a href="mailto:cesarsullen@proton.me" class="foot-mail"
+        ><i
+          class="ico"
+          style="background-image: url(&quot;../assets/icons/mail.svg&quot;)"
+        ></i
+        >cesarsullen@proton.me</a
+      >
+      <img
+        class="foot-art"
+        src="../assets/images/footer-mountains.png"
+        alt=""
+        width="2400"
+        height="330"
+        loading="lazy"
+        decoding="async"
+      />
+    </footer>
+    <script src="../js/donations.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/reveal.js"></script>
+  </body>
 </html>
