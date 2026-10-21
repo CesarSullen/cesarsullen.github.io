@@ -18,6 +18,7 @@
     ".cta-body p",
     ".cta-body .cbtn",
     ".tiles li",
+    ".demos > li",
     ".works li",
     ".donation-card",
     ".platform-card",

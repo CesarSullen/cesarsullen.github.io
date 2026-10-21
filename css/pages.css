@@ -173,6 +173,69 @@ body {
   font-weight: 600;
 }
 
+/* DEMO FOLDERS */
+.demos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-top: 1.4rem;
+}
+.demo-folder {
+  padding: 0.85rem;
+  background: #f8f4eb;
+  border: 0.06rem solid var(--line);
+  border-radius: 0.9rem;
+}
+.demo-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.demo-main .ico {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.demo-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.demo-name small {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+.demo-pop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+.demo-pop a {
+  display: block;
+  padding: 0.3rem 0.3rem 0.45rem;
+  background: var(--card);
+  border: 0.06rem solid var(--line);
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+.demo-pop img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.35rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
 /* DONATIONS & PWA INSTALL */
 .donations,
 .platforms {
@@ -331,7 +394,7 @@ body {
   }
   .tiles {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(8.4rem, 1fr));
     gap: 1.4rem;
     margin-top: 2.4rem;
   }
@@ -366,7 +429,7 @@ body {
   }
   .works {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.3rem;
     margin-top: 2.4rem;
   }
@@ -381,7 +444,8 @@ body {
       border-color 0.2s;
   }
   .work-img {
-    height: 13rem;
+    height: auto;
+    aspect-ratio: 1.8;
     border-radius: 0.9rem;
   }
   .work-card span {
@@ -458,6 +522,116 @@ body {
     color: var(--brown);
   }
 
+  /* DEMO FOLDERS */
+  .demos {
+    grid-template-columns: repeat(3, minmax(0, 18rem));
+    gap: 2.3rem;
+    margin-top: 2.8rem;
+  }
+  .demo-folder {
+    position: relative;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+  .demo-main {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.1rem;
+    height: 12rem;
+    padding: 0 1rem;
+    background: #f8f4eb;
+    border: 0.1rem solid var(--line);
+    border-radius: 0 1.1rem 1.1rem 1.1rem;
+    text-align: center;
+    box-shadow:
+      0 0.4rem 0 -0.15rem #efe6d6,
+      0 0.8rem 0 -0.3rem #e8ddc9;
+    transition:
+      transform 0.2s,
+      border-color 0.2s;
+  }
+  .demo-main::before {
+    content: "";
+    position: absolute;
+    top: -1.2rem;
+    left: -0.1rem;
+    width: 6rem;
+    height: 1.3rem;
+    background: #f8f4eb;
+    border: 0.1rem solid var(--line);
+    border-bottom: 0;
+    border-radius: 0.7rem 0.7rem 0 0;
+  }
+  .demo-main .ico {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 0.8rem;
+  }
+  .demo-name {
+    font-size: 1.2rem;
+  }
+  .demo-name small {
+    font-size: 0.95rem;
+  }
+  .demo-folder:hover .demo-main,
+  .demo-folder:focus-within .demo-main,
+  .demo-folder:hover .demo-main::before,
+  .demo-folder:focus-within .demo-main::before {
+    border-color: #cdbca4;
+    transform: translateY(-0.3rem);
+  }
+  .demo-pop {
+    margin-top: 1.2rem;
+  }
+  .demo-pop a {
+    padding: 0.4rem 0.4rem 0.6rem;
+    border-radius: 0.9rem;
+    font-size: 1rem;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .demo-pop {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 15;
+      display: flex;
+      gap: 1rem;
+      margin-top: 0;
+      padding-top: 1.6rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(0.5rem);
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s;
+    }
+    .demo-folder:nth-child(2) .demo-pop {
+      left: 50%;
+      translate: -50% 0;
+    }
+    .demo-folder:nth-child(3) .demo-pop {
+      right: 0;
+      left: auto;
+    }
+    .demo-folder:hover .demo-pop,
+    .demo-folder:focus-within .demo-pop {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+    .demo-pop a {
+      width: 17rem;
+      box-shadow: 0 0.8rem 1.8rem rgba(80, 60, 40, 0.18);
+      transition: border-color 0.2s;
+    }
+    .demo-pop a:hover {
+      border-color: #cdbca4;
+    }
+  }
   /* RESETS */
   .page .intro {
     line-height: 1.8rem;
@@ -513,4 +687,132 @@ body {
   .steps li {
     padding-left: 0;
   }
+}
+
+/* ONLYFANS PAGE */
+.onlyfans-page {
+  background-color: #191818;
+  overflow-x: hidden;
+}
+
+.onlyfans-page .body-container {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* AGE CONFIRMATION */
+.onlyfans-page .advice {
+  padding: 1rem;
+  width: 100%;
+  max-width: 350px;
+  background-color: white;
+  border-radius: 8px;
+  margin: auto;
+  color: black;
+}
+
+.onlyfans-page .of-img {
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.onlyfans-page .card-title {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.onlyfans-page .advice-text {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.onlyfans-page .bold {
+  color: black;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+.onlyfans-page .advice .btn {
+  width: 100%;
+  min-width: 300px;
+  padding: 0.5rem;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.onlyfans-page .advice .btn:hover {
+  opacity: 0.8;
+}
+
+.onlyfans-page .advice .btn:active {
+  transform: none;
+}
+
+/* ACCEPT / DECLINE */
+.onlyfans-page .accept-btn {
+  background-color: #0990d0;
+}
+
+.onlyfans-page .decline-btn {
+  background-color: #9d9d9e;
+  color: black;
+}
+
+/* PORTFOLIO BUTTON */
+.onlyfans-page .go-back-btn {
+  display: block;
+  width: 100%;
+  min-width: 300px;
+  padding: 0.8rem 1.6rem;
+  margin-top: 1rem;
+  border: 2px solid #6201de;
+  border-radius: 8px;
+  background: #6201de;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.onlyfans-page .go-back-btn:hover {
+  background: rgb(122.7130044843, 20.0582959641, 253.9417040359);
+  box-shadow: 0 4px 12px rgba(98, 1, 222, 0.3);
+  transform: translateY(-2px);
+}
+
+.onlyfans-page .go-back-btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* VIDEO */
+.onlyfans-page #packVideo {
+  margin: auto;
+  width: 100%;
+  border: solid 2px #6201de;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* HIDDEN */
+.onlyfans-page .d-none {
+  display: none;
 }

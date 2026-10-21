@@ -4,7 +4,7 @@ const projects = [
     name: "STOX",
     text: "STOX is a complete ecosystem for businesses with one or several points of sale: the owner manages from STOX and his employees operate from SELY, all optionally synchronized by the cloud.",
     img: "./assets/images/banners/stox.png",
-    href: "https://cesarsullen.github.io/stox/",
+    href: "https://stox.sullen.deno.net",
   },
   {
     id: "synthocean",
@@ -41,6 +41,13 @@ const projects = [
     text: "It's a Kanban-type task management application designed with privacy first and completely offline operation. Create, edit, and delete custom columns and tasks, assign due dates, and mark progress with dynamic counters for pending and completed tasks.",
     img: "./assets/images/banners/kuic.png",
     href: "https://cesarsullen.github.io/kuic",
+  },
+  {
+    id: "joycon-lab",
+    name: "Joy-Con Lab",
+    text: "Joy-Con Lab is a Nintendo game catalog built as a test project to practice and experiment with new ideas.",
+    img: "./assets/images/banners/joycon-lab.jpg",
+    href: "https://cesarsullen.github.io/joycon-lab",
   },
   {
     id: "sophiemystique",

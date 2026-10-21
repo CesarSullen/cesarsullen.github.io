@@ -1,195 +1,557 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Portfolio of Saru, full-stack developer and UI/UX designer with 5 years of experience." />
-		<meta property="og:title" content="Saru Koto" />
-		<meta property="og:description" content="An overview of my services" />
-		<meta property="og:url" content="https://cesarsullen.github.io/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://cesarsullen.github.io/assets/opengraph/favicon.png" />
-		<link rel="icon" type="image/png" href="./assets/opengraph/favicon.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="./assets/opengraph/favicon.png" />
-		<link rel="stylesheet" href="./css/base.css" />
-		<link rel="stylesheet" href="./css/home.css" />
-		<title>Saru Koto</title>
-	</head>
-	<body>
-		<header class="nav">
-			<a href="#top" class="brand">
-				<img class="brand-mark" src="./assets/opengraph/logo.png" alt="" />
-				<span class="brand-name">Saru Koto</span>
-			</a>
-			<nav class="nav-links" aria-label="Main">
-				<a href="#top" class="active"><i class="mask nav-ic ni-home"></i><span>Home</span></a>
-				<a href="#services"><i class="mask nav-ic ni-services"></i><span>Services</span></a>
-				<a href="#skills"><i class="mask nav-ic ni-skills"></i><span>Skills</span></a>
-				<a href="#portfolio"><i class="mask nav-ic ni-portfolio"></i><span>Portfolio</span></a>
-				<a href="#about"><i class="mask nav-ic ni-about"></i><span>About</span></a>
-			</nav>
-			<a href="mailto:cesarsullen@proton.me" class="pill pill-brown pill-sm">Let's talk <i class="mask i-arrow"></i></a>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Saru, full-stack developer and UI/UX designer with 5 years of experience."
+    />
+    <meta property="og:title" content="Saru Koto" />
+    <meta property="og:description" content="An overview of my services" />
+    <meta property="og:url" content="https://cesarsullen.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://cesarsullen.github.io/assets/opengraph/favicon.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/opengraph/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/opengraph/favicon.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <title>Saru Koto</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#top" class="brand">
+        <img class="brand-mark" src="./assets/opengraph/logo.png" alt="" />
+        <span class="brand-name">Saru Koto</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#top" class="active"
+          ><i class="mask nav-ic ni-home"></i><span>Home</span></a
+        >
+        <a href="#services"
+          ><i class="mask nav-ic ni-services"></i><span>Services</span></a
+        >
+        <a href="#skills"
+          ><i class="mask nav-ic ni-skills"></i><span>Skills</span></a
+        >
+        <a href="#portfolio"
+          ><i class="mask nav-ic ni-portfolio"></i><span>Portfolio</span></a
+        >
+        <a href="#about"
+          ><i class="mask nav-ic ni-about"></i><span>About</span></a
+        >
+      </nav>
+      <a href="mailto:cesarsullen@proton.me" class="pill pill-brown pill-sm"
+        >Let's talk <i class="mask i-arrow"></i
+      ></a>
+    </header>
 
-		<section class="hero" id="top">
-			<div class="ph hero-img" style="background-image:url('./assets/images/hero.jpg'),linear-gradient(135deg,#e9dcc6,#d9c7a8)"></div>
-			<img class="hero-ticks" src="./assets/icons/ui/hero-ticks.svg" alt="" />
-			<div class="hero-copy">
-				<h1>Building websites that feel as good as they look.</h1>
-				<p>
-					I'm a developer focused on clean code,<br />
-					minimal design and great user experiences.<br />
-					I build fast, accessible and beautiful websites<br />
-					with a calm and intentional approach.
-				</p>
-				<div class="hero-actions">
-					<a href="#portfolio" class="pill pill-brown">View my work <i class="mask i-arrow"></i></a>
-					<a href="./docs/CV.pdf" class="pill pill-outline">Download CV</a>
-				</div>
-			</div>
-			<p class="hero-jp">良いものを作ろう <span class="hero-line"></span></p>
-		</section>
+    <section class="hero" id="top">
+      <div
+        class="ph hero-img"
+        style="
+          background-image:
+            url(&quot;./assets/images/hero.jpg&quot;),
+            linear-gradient(135deg, #e9dcc6, #d9c7a8);
+        "
+      ></div>
+      <img class="hero-ticks" src="./assets/icons/ui/hero-ticks.svg" alt="" />
+      <div class="hero-copy">
+        <h1>Building websites that feel as good as they look.</h1>
+        <p>
+          I'm a developer focused on clean code,<br />
+          minimal design and great user experiences.<br />
+          I build fast, accessible and beautiful websites<br />
+          with a calm and intentional approach.
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="pill pill-brown"
+            >View my work <i class="mask i-arrow"></i
+          ></a>
+          <a href="./docs/CV.pdf" class="pill pill-outline">Download CV</a>
+        </div>
+      </div>
+      <p class="hero-jp">良いものを作ろう <span class="hero-line"></span></p>
+    </section>
 
-		<section class="strip" aria-label="Works and side projects">
-			<button class="strip-arrow strip-prev" aria-label="Previous"><i class="mask i-left"></i></button>
-			<div class="strip-track">
-				<a href="https://getbaxar.com" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/baxar-logo.png')"></i><span>Baxar</span></a>
-				<a href="https://cesarsullen.github.io/stox/" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/stox-logo.png')"></i><span>STOX</span></a>
-				<a href="https://cesarsullen.github.io/kuic" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/kuic-logo.png')"></i><span>Kuic</span></a>
-				<a href="https://cesarsullen.github.io/greed0" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/greed0-logo.png')"></i><span>Greed0</span></a>
-				<a href="https://cesarsullen.github.io/thewitcher-api" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/witcher-logo.png')"></i><span>The Witcher API</span></a>
-				<a href="https://cesarsullen.github.io/starjewels-2.0" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/starjewels.png')"></i><span>Star Jewel's</span></a>
-				<a href="https://corvempa.com" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/corvempa-logo.png')"></i><span>Corvempa</span></a>
-				<a href="https://moncedhouse.com" class="strip-item" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/images/logos/monced-logo.png')"></i><span>Monced House</span></a>
-			</div>
-			<button class="strip-arrow strip-next" aria-label="Next"><i class="mask i-right"></i></button>
-		</section>
+    <section class="strip" aria-label="Works and side projects">
+      <button class="strip-arrow strip-prev" aria-label="Previous">
+        <i class="mask i-left"></i>
+      </button>
+      <div class="strip-track">
+        <a
+          href="https://getbaxar.com"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/baxar-logo.png&quot;);
+            "
+          ></i
+          ><span>Baxar</span></a
+        >
+        <a
+          href="https://stox.sullen.deno.net"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/stox-logo.png&quot;);
+            "
+          ></i
+          ><span>STOX</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/kuic"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/kuic-logo.png&quot;);
+            "
+          ></i
+          ><span>Kuic</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/greed0"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/greed0-logo.png&quot;);
+            "
+          ></i
+          ><span>Greed0</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/thewitcher-api"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/witcher-logo.png&quot;);
+            "
+          ></i
+          ><span>The Witcher API</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/starjewels-2.0"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/starjewels.png&quot;);
+            "
+          ></i
+          ><span>Star Jewel's</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/corvempa/"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/corvempa-logo.png&quot;);
+            "
+          ></i
+          ><span>Corvempa</span></a
+        >
+        <a
+          href="https://cesarsullen.github.io/monced-dresses/"
+          class="strip-item"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i
+            class="ico"
+            style="
+              background-image: url(&quot;./assets/images/logos/monced-logo.png&quot;);
+            "
+          ></i
+          ><span>Monced House</span></a
+        >
+      </div>
+      <button class="strip-arrow strip-next" aria-label="Next">
+        <i class="mask i-right"></i>
+      </button>
+    </section>
 
-		<section class="section services" id="services">
-			<div class="wrap">
-				<header class="sec-head">
-					<small>サービス</small>
-					<h2>My Services</h2>
-					<span class="squig"></span>
-				</header>
-				<p class="note note-r" aria-hidden="true">Clean code<br />Happy users<i class="smile mask i-smile"></i></p>
-				<div class="cards">
-					<article class="card">
-						<i class="tile tile-green"><b class="ico" style="background-image:url('./assets/icons/code.svg')"></b></i>
-						<h3>Stack</h3>
-						<p>I mainly use HTML, CSS and JavaScript. Although I also do well in frameworks like Vue.</p>
-						<i class="card-arr mask i-arrow"></i>
-					</article>
-					<article class="card">
-						<i class="tile tile-peach"><b class="ico" style="background-image:url('./assets/icons/palette.svg')"></b></i>
-						<h3>Design</h3>
-						<p>Websites designed by myself. I can also adapt my code to your design if needed.</p>
-						<i class="card-arr mask i-arrow"></i>
-					</article>
-					<article class="card">
-						<i class="tile tile-blue"><b class="ico" style="background-image:url('./assets/icons/devices.svg')"></b></i>
-						<h3>Responsive</h3>
-						<p>Every website can adapt to any display size, guaranteeing a consistent user experience.</p>
-						<i class="card-arr mask i-arrow"></i>
-					</article>
-				</div>
-			</div>
-		</section>
+    <section class="section services" id="services">
+      <div class="wrap">
+        <header class="sec-head">
+          <small>サービス</small>
+          <h2>My Services</h2>
+          <span class="squig"></span>
+        </header>
+        <p class="note note-r" aria-hidden="true">
+          Clean code<br />Happy users<i class="smile mask i-smile"></i>
+        </p>
+        <div class="cards">
+          <article class="card">
+            <i class="tile tile-green"
+              ><b
+                class="ico"
+                style="
+                  background-image: url(&quot;./assets/icons/code.svg&quot;);
+                "
+              ></b
+            ></i>
+            <h3>Simple Stack</h3>
+            <p>
+              I mainly use HTML, CSS and JavaScript. Although I also do well in
+              frameworks like Vue.
+            </p>
+            <i class="card-arr mask i-arrow"></i>
+          </article>
+          <article class="card">
+            <i class="tile tile-peach"
+              ><b
+                class="ico"
+                style="
+                  background-image: url(&quot;./assets/icons/palette.svg&quot;);
+                "
+              ></b
+            ></i>
+            <h3>Thoughtful Design</h3>
+            <p>
+              Websites designed by myself. I can also adapt my code to your
+              design if needed.
+            </p>
+            <i class="card-arr mask i-arrow"></i>
+          </article>
+          <article class="card">
+            <i class="tile tile-blue"
+              ><b
+                class="ico"
+                style="
+                  background-image: url(&quot;./assets/icons/devices.svg&quot;);
+                "
+              ></b
+            ></i>
+            <h3>Always Responsive</h3>
+            <p>
+              Every website can adapt to any display size, guaranteeing a
+              consistent user experience.
+            </p>
+            <i class="card-arr mask i-arrow"></i>
+          </article>
+        </div>
+      </div>
+    </section>
 
-		<section class="section skills" id="skills">
-			<div class="wrap">
-				<header class="sec-head">
-					<small>スキル</small>
-					<h2>My Skills</h2>
-					<span class="squig"></span>
-				</header>
-				<p class="note note-skills" aria-hidden="true">Small tools<br />Big dreams<i class="smile mask i-smile"></i></p>
-				<div class="deco leaf-left" style="background-image:url('./assets/images/decor/leaf.png')"></div>
-				<ul class="skill-grid">
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/html5.svg')"></i>HTML</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/css3.svg')"></i>CSS</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/sass.svg')"></i>Sass</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/javascript.svg')"></i>JavaScript</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/typescript.svg')"></i>TypeScript</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/deno.svg')"></i>Deno</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/denodeploy.svg')"></i>Deno Deploy</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/postgresql.svg')"></i>PostgreSQL</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/sqlite.svg')"></i>SQLite</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/git.svg')"></i>Git</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/github.svg')"></i>GitHub</li>
-					<li><i class="ico" style="background-image:url('./assets/icons/stack/linux.svg')"></i>Linux</li>
-				</ul>
-			</div>
-		</section>
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <header class="sec-head">
+          <small>スキル</small>
+          <h2>My Skills</h2>
+          <span class="squig"></span>
+        </header>
+        <p class="note note-skills" aria-hidden="true">
+          Small tools<br />Big dreams<i class="smile mask i-smile"></i>
+        </p>
+        <div
+          class="deco leaf-left"
+          style="
+            background-image: url(&quot;./assets/images/decor/leaf.png&quot;);
+          "
+        ></div>
+        <ul class="skill-grid">
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/html5.svg&quot;);
+              "
+            ></i
+            >HTML
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/css3.svg&quot;);
+              "
+            ></i
+            >CSS
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/sass.svg&quot;);
+              "
+            ></i
+            >Sass
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/javascript.svg&quot;);
+              "
+            ></i
+            >JavaScript
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/typescript.svg&quot;);
+              "
+            ></i
+            >TypeScript
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/deno.svg&quot;);
+              "
+            ></i
+            >Deno
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/denodeploy.svg&quot;);
+              "
+            ></i
+            >Deno Deploy
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/postgresql.svg&quot;);
+              "
+            ></i
+            >PostgreSQL
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/sqlite.svg&quot;);
+              "
+            ></i
+            >SQLite
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/git.svg&quot;);
+              "
+            ></i
+            >Git
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/github.svg&quot;);
+              "
+            ></i
+            >GitHub
+          </li>
+          <li>
+            <i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/stack/linux.svg&quot;);
+              "
+            ></i
+            >Linux
+          </li>
+        </ul>
+      </div>
+    </section>
 
-		<section class="section portfolio" id="portfolio">
-			<div class="wrap">
-				<header class="sec-head">
-					<small>プロジェクト</small>
-					<h2>My Portfolio</h2>
-					<span class="squig"></span>
-				</header>
-			</div>
-			<div class="carousel">
-				<button class="car-arrow car-prev" aria-label="Previous project"><i class="mask i-left"></i></button>
-				<div class="car-track" id="carTrack"></div>
-				<button class="car-arrow car-next" aria-label="Next project"><i class="mask i-right"></i></button>
-			</div>
-			<div class="dots" id="carDots"></div>
-		</section>
+    <section class="section portfolio" id="portfolio">
+      <div class="wrap">
+        <header class="sec-head">
+          <small>プロジェクト</small>
+          <h2>My Portfolio</h2>
+          <span class="squig"></span>
+        </header>
+      </div>
+      <div class="carousel">
+        <button class="car-arrow car-prev" aria-label="Previous project">
+          <i class="mask i-left"></i>
+        </button>
+        <div class="car-track" id="carTrack"></div>
+        <button class="car-arrow car-next" aria-label="Next project">
+          <i class="mask i-right"></i>
+        </button>
+      </div>
+      <div class="dots" id="carDots"></div>
+    </section>
 
-		<section class="section about" id="about">
-			<div class="deco hang-plant" style="background-image:url('./assets/images/decor/hanging-plant.png')"></div>
-			<div class="deco books" style="background-image:url('./assets/images/decor/books.png')"></div>
-			<div class="wrap">
-				<header class="sec-head">
-					<small>私について</small>
-					<h2>About Me</h2>
-					<span class="squig"></span>
-				</header>
-				<figure class="polaroid">
-					<div class="ph polaroid-img" style="background-image:url('./assets/images/portrait.jpg'),linear-gradient(135deg,#e9dcc6,#d9c7a8)"></div>
-					<figcaption><b>Saru Koto</b><span>Web Developer · UI/UX Designer</span><span>5 years of experience</span></figcaption>
-				</figure>
-				<div class="journey">
-					<h3>My Journey</h3>
-					<ol>
-						<li><b>2021</b><span>Started building for the web</span></li>
-						<li><b>2022</b><span>First freelance projects</span></li>
-						<li><b>2023</b><span>Expanded into TypeScript &amp; modern tooling</span></li>
-						<li><b>2024</b><span>Built and launched larger independent projects</span></li>
-						<li><b>2025</b><span>Started SynthOcean</span></li>
-					</ol>
-				</div>
-				<p class="note note-about" aria-hidden="true">Better<br />code<br />Bigger<br />dreams<i class="smile mask i-smile"></i></p>
-			</div>
-		</section>
+    <section class="section about" id="about">
+      <div
+        class="deco hang-plant"
+        style="
+          background-image: url(&quot;./assets/images/decor/hanging-plant.png&quot;);
+        "
+      ></div>
+      <div
+        class="deco books"
+        style="
+          background-image: url(&quot;./assets/images/decor/books.png&quot;);
+        "
+      ></div>
+      <div class="wrap">
+        <header class="sec-head">
+          <small>私について</small>
+          <h2>About Me</h2>
+          <span class="squig"></span>
+        </header>
+        <figure class="polaroid">
+          <div
+            class="ph polaroid-img"
+            style="
+              background-image:
+                url(&quot;./assets/images/portrait.jpg&quot;),
+                linear-gradient(135deg, #e9dcc6, #d9c7a8);
+            "
+          ></div>
+          <figcaption>
+            <b>Saru Koto</b><span>Web Developer · UI/UX Designer</span
+            ><span>5 years of experience</span>
+          </figcaption>
+        </figure>
+        <div class="journey">
+          <h3>My Journey</h3>
+          <ol>
+            <li><b>2021</b><span>Started building for the web</span></li>
+            <li><b>2022</b><span>First freelance projects</span></li>
+            <li>
+              <b>2023</b
+              ><span>Expanded into TypeScript &amp; modern tooling</span>
+            </li>
+            <li>
+              <b>2024</b
+              ><span>Built and launched larger independent projects</span>
+            </li>
+            <li><b>2025</b><span>Started SynthOcean</span></li>
+          </ol>
+        </div>
+        <p class="note note-about" aria-hidden="true">
+          Better<br />code<br />Bigger<br />dreams<i
+            class="smile mask i-smile"
+          ></i>
+        </p>
+      </div>
+    </section>
 
-		<section class="cta" id="links">
-			<div class="ph cta-bg" style="background-image:url('./assets/images/cta-band.jpg'),linear-gradient(135deg,#e9dcc6,#d9c7a8)"></div>
-			<div class="cta-body">
-				<small>リンク</small>
-				<h2>Want to see more of what I do?</h2>
-				<p>Feel free to check out my links, support my work <br />or get in touch. I'd love to hear from you!</p>
-				<div class="cta-btns">
-					<a href="./views/donations.html" class="cbtn cbtn-brown"><i class="ico" style="background-image:url('./assets/icons/coffee.svg')"></i>Support / Donations</a>
-					<a href="./links.html" class="cbtn cbtn-green"><i class="ico" style="background-image:url('./assets/icons/link.svg')"></i>My links</a>
-					<a href="https://github.com/CesarSullen" class="cbtn cbtn-dark" target="_blank" rel="noopener noreferrer"><i class="ico" style="background-image:url('./assets/icons/github.svg')"></i>GitHub</a>
-					<a href="mailto:cesarsullen@proton.me" class="cbtn cbtn-light"><i class="ico" style="background-image:url('./assets/icons/mail.svg')"></i>Email me</a>
-				</div>
-			</div>
-		</section>
+    <section class="cta" id="links">
+      <div
+        class="ph cta-bg"
+        style="
+          background-image:
+            url(&quot;./assets/images/cta-band.jpg&quot;),
+            linear-gradient(135deg, #e9dcc6, #d9c7a8);
+        "
+      ></div>
+      <div class="cta-body">
+        <small>リンク</small>
+        <h2>Want to see more of what I do?</h2>
+        <p>
+          Feel free to check out my links, support my work <br />or get in
+          touch. I'd love to hear from you!
+        </p>
+        <div class="cta-btns">
+          <a href="./views/donations.html" class="cbtn cbtn-brown"
+            ><i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/coffee.svg&quot;);
+              "
+            ></i
+            >Support / Donations</a
+          >
+          <a href="./links.html" class="cbtn cbtn-green"
+            ><i
+              class="ico"
+              style="background-image: url(&quot;./assets/icons/link.svg&quot;)"
+            ></i
+            >My links</a
+          >
+          <a
+            href="https://github.com/CesarSullen"
+            class="cbtn cbtn-dark"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i
+              class="ico"
+              style="
+                background-image: url(&quot;./assets/icons/github.svg&quot;);
+              "
+            ></i
+            >GitHub</a
+          >
+          <a href="mailto:cesarsullen@proton.me" class="cbtn cbtn-light"
+            ><i
+              class="ico"
+              style="background-image: url(&quot;./assets/icons/mail.svg&quot;)"
+            ></i
+            >Email me</a
+          >
+        </div>
+      </div>
+    </section>
 
-		<footer class="foot">
-			<a href="#top" class="brand brand-foot"><img class="brand-mark" src="./assets/opengraph/logo.png" alt="" /><span class="brand-name">Saru Koto</span></a>
-			<p class="foot-mid">Let's build something nice together.</p>
-			<a href="mailto:cesarsullen@proton.me" class="foot-mail"><i class="ico" style="background-image:url('./assets/icons/mail.svg')"></i>cesarsullen@proton.me</a>
-			<img class="foot-art" src="./assets/images/footer-mountains.png" alt="" width="2400" height="330" loading="lazy" decoding="async" />
-		</footer>
+    <footer class="foot">
+      <a href="#top" class="brand brand-foot"
+        ><img
+          class="brand-mark"
+          src="./assets/opengraph/logo.png"
+          alt=""
+        /><span class="brand-name">Saru Koto</span></a
+      >
+      <p class="foot-mid">Let's build something nice together.</p>
+      <a href="mailto:cesarsullen@proton.me" class="foot-mail"
+        ><i
+          class="ico"
+          style="background-image: url(&quot;./assets/icons/mail.svg&quot;)"
+        ></i
+        >cesarsullen@proton.me</a
+      >
+      <img
+        class="foot-art"
+        src="./assets/images/footer-mountains.png"
+        alt=""
+        width="2400"
+        height="330"
+        loading="lazy"
+        decoding="async"
+      />
+    </footer>
 
-		<script src="./js/supabase-config.js"></script>
-		<script src="./js/app.js"></script>
-		<script src="./js/nav.js"></script>
-		<script src="./js/reveal.js"></script>
-	</body>
+    <script src="./js/supabase-config.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/reveal.js"></script>
+  </body>
 </html>
