@@ -3,67 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta property="og:title" content="Saru's OF" />
     <meta property="og:description" content="Shhh..." />
-    <meta property="og:url" content="cesarsullen.github.io" />
+    <meta
+      property="og:url"
+      content="https://cesarsullen.github.io/views/onlyfans.html"
+    />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="../assets/icons/of-icon.svg" />
-
-    <link rel="icon" type="image/jpg" href="../assets/icons/of-icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/of-icon.svg" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="../assets/icons/of-icon.svg"
     />
-
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/pages.css" />
-
     <title>Saru's OF</title>
   </head>
-
-  <body class="onlyfans-page">
-    <div class="body-container">
-      <div class="advice">
-        <img src="../assets/icons/of-icon.svg" class="of-img" />
-
-        <h5 class="card-title">Age Confirmation</h5>
-
+  <body class="gate-mode">
+    <header class="nav">
+      <a href="../index.html" class="brand">
+        <img class="brand-mark" src="../assets/opengraph/logo.png" alt="" />
+        <span class="brand-name">Saru Koto</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../index.html"
+          ><i class="mask nav-ic ni-home"></i><span>Home</span></a
+        >
+        <a href="../index.html#services"
+          ><i class="mask nav-ic ni-services"></i><span>Services</span></a
+        >
+        <a href="../index.html#skills"
+          ><i class="mask nav-ic ni-skills"></i><span>Skills</span></a
+        >
+        <a href="../index.html#portfolio"
+          ><i class="mask nav-ic ni-portfolio"></i><span>Portfolio</span></a
+        >
+        <a href="../index.html#about"
+          ><i class="mask nav-ic ni-about"></i><span>About</span></a
+        >
+      </nav>
+      <a href="mailto:cesarsullen@proton.me" class="pill pill-brown pill-sm"
+        >Let's talk <i class="mask i-arrow"></i
+      ></a>
+    </header>
+    <main class="page gate-page">
+      <section class="advice" id="advice">
+        <img src="../assets/icons/of-icon.svg" class="of-img" alt="" />
+        <h1 class="card-title">Age Confirmation</h1>
         <p class="advice-text">
           This site contains material
           <span class="bold">restricted to minors</span> including nudity and
           explicit sexual activity. You must confirm that you are
           <span class="bold">over 18</span> to enter this site.
         </p>
-
         <div>
-          <button onclick="playVideo()" class="btn accept-btn" type="button">
+          <button id="confirmAgeBtn" class="btn accept-btn" type="button">
             Yes, I'm over 18
           </button>
-
-          <a href="../links.html">
-            <button class="btn decline-btn" type="button">Go back</button>
-          </a>
+          <a href="../links.html" class="btn decline-btn">Go back</a>
         </div>
-      </div>
-
-      <video
-        id="packVideo"
-        class="d-none"
-        src="../assets/videos/gato.mp4"
-        type="video/mp4"
-        loop
+      </section>
+      <section class="reveal" id="reveal" hidden>
+        <video
+          id="packVideo"
+          class="reveal-video"
+          src="../assets/videos/gato.mp4"
+          loop
+          playsinline
+        >
+          Your browser does not support the video tag.
+        </video>
+        <a href="../index.html" class="pill pill-brown pill-md"
+          >Now see my portfolio <i class="mask i-arrow"></i
+        ></a>
+      </section>
+    </main>
+    <footer class="foot">
+      <a href="../index.html" class="brand brand-foot"
+        ><img
+          class="brand-mark"
+          src="../assets/opengraph/logo.png"
+          alt=""
+        /><span class="brand-name">Saru Koto</span></a
       >
-        Your browser does not support the video tag.
-      </video>
-
-      <a href="../index.html" class="d-none">
-        <button class="btn go-back-btn" type="button">
-          Now see my portfolio
-        </button>
-      </a>
-    </div>
-
+      <p class="foot-mid">Let's build something nice together.</p>
+      <a href="mailto:cesarsullen@proton.me" class="foot-mail"
+        ><i
+          class="ico"
+          style="background-image: url(&quot;../assets/icons/mail.svg&quot;)"
+        ></i
+        >cesarsullen@proton.me</a
+      >
+      <img
+        class="foot-art"
+        src="../assets/images/footer-mountains.png"
+        alt=""
+        width="2400"
+        height="330"
+        loading="lazy"
+        decoding="async"
+      />
+    </footer>
     <script src="../js/onlyfans.js"></script>
+    <script src="../js/nav.js"></script>
   </body>
 </html>

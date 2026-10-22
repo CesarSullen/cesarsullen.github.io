@@ -689,130 +689,132 @@ body {
   }
 }
 
-/* ONLYFANS PAGE */
-.onlyfans-page {
-  background-color: #191818;
-  overflow-x: hidden;
+/* AGE GATE */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
 }
 
-.onlyfans-page .body-container {
-  padding: 1rem;
-  max-width: 1000px;
-  margin: 2rem auto 0;
+.gate-page {
   display: grid;
-  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 1.5rem;
+  min-height: 60vh;
 }
 
-/* AGE CONFIRMATION */
-.onlyfans-page .advice {
-  padding: 1rem;
+.gate-mode {
+  background: #191818;
+}
+
+.gate-mode .nav,
+.gate-mode .foot {
+  display: none;
+}
+
+.gate-mode .gate-page {
+  place-items: start center;
+  min-height: 100vh;
+  padding: 48px 16px;
+}
+
+:where(.advice),
+:where(.advice) * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.3s;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins";
+  line-height: normal;
+  color: white;
+}
+
+.advice {
   width: 100%;
   max-width: 350px;
+  padding: 16px;
+  border-radius: 8px;
   background-color: white;
-  border-radius: 8px;
-  margin: auto;
+  font-size: 16px;
   color: black;
 }
 
-.onlyfans-page .of-img {
-  display: block;
-  margin: 0 auto 0.5rem;
+.advice .of-img {
+  display: inline;
+  max-width: none;
 }
 
-.onlyfans-page .card-title {
-  font-size: 1.5rem;
+.advice .card-title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  color: black;
+  text-align: center;
+}
+
+.advice .advice-text {
+  margin-bottom: 8px;
   color: black;
 }
 
-.onlyfans-page .advice-text {
-  margin-bottom: 0.5rem;
-  color: black;
-}
-
-.onlyfans-page .bold {
-  color: black;
+.advice .bold {
   font-weight: 600;
+  color: black;
 }
 
-/* BUTTONS */
-.onlyfans-page .advice .btn {
+.advice .btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
-  min-width: 300px;
-  padding: 0.5rem;
   margin-top: 5px;
+  padding: 8px;
+  overflow: hidden;
   border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: normal;
-  text-transform: none;
-  color: white;
-  transition: opacity 0.3s;
-}
-
-.onlyfans-page .advice .btn:hover {
-  opacity: 0.8;
-}
-
-.onlyfans-page .advice .btn:active {
-  transform: none;
-}
-
-/* ACCEPT / DECLINE */
-.onlyfans-page .accept-btn {
-  background-color: #0990d0;
-}
-
-.onlyfans-page .decline-btn {
-  background-color: #9d9d9e;
-  color: black;
-}
-
-/* PORTFOLIO BUTTON */
-.onlyfans-page .go-back-btn {
-  display: block;
-  width: 100%;
-  min-width: 300px;
-  padding: 0.8rem 1.6rem;
-  margin-top: 1rem;
-  border: 2px solid #6201de;
-  border-radius: 8px;
-  background: #6201de;
-  color: white;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
+  color: white;
   cursor: pointer;
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.onlyfans-page .go-back-btn:hover {
-  background: rgb(122.7130044843, 20.0582959641, 253.9417040359);
-  box-shadow: 0 4px 12px rgba(98, 1, 222, 0.3);
-  transform: translateY(-2px);
+.advice .btn:hover {
+  filter: brightness(0.9);
 }
 
-.onlyfans-page .go-back-btn:active {
-  transform: scale(0.95);
-  box-shadow: none;
+.advice .accept-btn {
+  background-color: #0990d0;
 }
 
-/* VIDEO */
-.onlyfans-page #packVideo {
-  margin: auto;
+.advice .decline-btn {
+  background-color: #9d9d9e;
+  color: black;
+}
+
+.reveal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
   width: 100%;
-  border: solid 2px #6201de;
-  border-radius: 8px;
-  margin-bottom: 2rem;
 }
 
-/* HIDDEN */
-.onlyfans-page .d-none {
+.reveal[hidden] {
   display: none;
+}
+
+.reveal-video {
+  width: 100%;
+  max-width: 38rem;
+  background: var(--card);
+  border: 0.06rem solid var(--line);
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(80, 60, 40, 0.12);
 }
