@@ -63,7 +63,7 @@
   overflow-x: auto;
   scroll-snap-type: x proximity;
   scroll-padding-inline: var(--pad);
-  padding: 0 var(--pad);
+  padding: var(--pad);
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -85,13 +85,18 @@
   line-height: 1.2;
   border-left: 0.06rem solid #e6ddcd;
 }
+
 .strip-item:first-child {
   border-left: 0;
 }
 .strip-item .ico {
   width: 3.1rem;
   height: 3.1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
+  transition: transform 0.2s;
+}
+.strip-item:hover .ico {
+  transform: scale(1.05);
 }
 
 /* SERVICES */
@@ -230,6 +235,7 @@
 .pcard .pimg {
   position: relative;
   height: 10rem;
+  aspect-ratio: 5 / 4;
   border-radius: 0.75rem;
   overflow: hidden;
 }
@@ -451,6 +457,10 @@
   padding: 0 0.4rem;
   text-align: center;
   line-height: 1.2;
+  transition: transform 0.25s;
+}
+.cbtn:hover {
+  transform: scale(1.03);
 }
 .cbtn .ico {
   width: 1.7rem;
@@ -600,7 +610,6 @@
   .strip-item .ico {
     width: 3.8rem;
     height: 3.4rem;
-    border-radius: 0.6rem;
   }
   .strip-arrow {
     position: absolute;
