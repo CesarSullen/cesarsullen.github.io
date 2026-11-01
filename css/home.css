@@ -234,8 +234,7 @@
 }
 .pcard .pimg {
   position: relative;
-  height: 10rem;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 5 / 3;
   border-radius: 0.75rem;
   overflow: hidden;
 }
@@ -794,7 +793,6 @@
   }
   .pcard .pimg {
     position: relative;
-    height: 11.2rem;
     border-radius: 0.9rem;
     overflow: hidden;
   }
@@ -1178,9 +1176,6 @@
   }
   .dots button::after {
     display: none;
-  }
-  .pcard p + .pill {
-    margin-top: auto;
   }
   .polaroid {
     margin: 0;
