@@ -4,7 +4,14 @@ const projects = [
     name: "STOX",
     text: "STOX is a complete ecosystem for businesses with one or several points of sale: the owner manages from STOX and his employees operate from SELY, all optionally synchronized by the cloud.",
     img: "./assets/images/banners/stox.png",
-    href: "https://stox.sullen.deno.net",
+    href: "https://stox.onrender.com",
+  },
+  {
+    id: "onlyfrens",
+    name: "OnlyFrens",
+    text: "OnlyFrens is a private social network for close friends where every post disappears after 24 hours. There is no search for strangers, no ads and no algorithm, and the code is public so anyone can check it.",
+    img: "./assets/images/banners/onlyfrens.jpg",
+    href: "https://cesarsullen.github.io/onlyfrens",
   },
   {
     id: "radiocast",
