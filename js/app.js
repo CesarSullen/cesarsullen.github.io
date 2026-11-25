@@ -4,7 +4,7 @@ const projects = [
     name: "STOX",
     text: "STOX is a complete ecosystem for businesses with one or several points of sale: the owner manages from STOX and his employees operate from SELY, all optionally synchronized by the cloud.",
     img: "./assets/images/banners/stox.png",
-    href: "https://stox.onrender.com",
+    href: "https://getstox.onrender.com",
   },
   {
     id: "onlyfrens",
